@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-size: 120px 120px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+  }
+
+  .shape-lime {
+    filter: brightness(1.05) sepia(1) hue-rotate(30deg) saturate(8);
+  }
+
+  .shape-glow {
+    filter: drop-shadow(0 0 15px rgba(212, 251, 32, 0.4));
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(-3deg);
+  }
+}
+
+.animate-float {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
