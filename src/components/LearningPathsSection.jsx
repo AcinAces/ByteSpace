@@ -40,7 +40,7 @@ export default function LearningPathsSection() {
               <Link
                 key={p.name}
                 to={p.href}
-                className="group bg-white rounded-[24px] p-5 border border-[#CED0D3] hover:border-[#D4FB20] hover:shadow-card transition-all duration-300 flex flex-col items-center justify-center text-center aspect-square"
+                className="group bg-white rounded-[24px] p-5 border border-[#CED0D3] hover:border-[#D4FB20] hover:shadow-card transition-all duration-300 flex flex-col items-center justify-center text-center aspect-square cursor-pointer active:scale-95"
               >
                 {/* Circular Lime Icon (Figma: rx=30, w=60, h=60, fill=#D4FB20) */}
                 <div className="w-[60px] h-[60px] rounded-full bg-[#D4FB20] flex items-center justify-center text-[#242528] mb-3.5 group-hover:scale-105 transition-transform duration-300">

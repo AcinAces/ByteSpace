@@ -6,10 +6,20 @@
   html {
     scroll-behavior: smooth;
     font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #D4FB20;
+    color: #040819;
   }
 }
 
@@ -71,17 +81,14 @@
 @keyframes page-enter {
   0% {
     opacity: 0;
-    transform: translateY(16px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 .animate-page-enter {
-  animation: page-enter 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  will-change: opacity, transform;
+  animation: page-enter 0.3s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {

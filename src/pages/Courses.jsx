@@ -49,7 +49,7 @@ export default function Courses() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col bg-white select-none">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* 
         Top Hero Banner Section (Height 360px matching Figma Search Page.svg)
       */}
@@ -82,7 +82,7 @@ export default function Courses() {
             </div>
 
             {/* Courses Dropdown Button */}
-            <button className="w-[147px] h-[48px] rounded-[24px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] flex items-center justify-center gap-1.5 hover:brightness-105 active:scale-95 transition-all shadow-md flex-shrink-0">
+            <button className="w-[147px] h-[48px] rounded-[24px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] flex items-center justify-center gap-1.5 hover:brightness-105 active:scale-95 transition-all shadow-md flex-shrink-0 cursor-pointer">
               <span>Courses</span>
               <ChevronDown className="w-4 h-4 text-[#242528]" />
             </button>
@@ -97,7 +97,7 @@ export default function Courses() {
           {/* Left: Filter, Level, Category Buttons */}
           <div className="flex flex-wrap items-center gap-3">
             {/* Filter */}
-            <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black transition-colors">
+            <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black cursor-pointer active:scale-95 transition-all">
               <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M1 3h14l-5.5 6.5V14l-3-2V9.5L1 3z"/>
               </svg>
@@ -105,7 +105,7 @@ export default function Courses() {
             </button>
 
             {/* Level */}
-            <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black transition-colors">
+            <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black cursor-pointer active:scale-95 transition-all">
               <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
                 <rect x="1" y="9" width="3" height="6" rx="0.5"/>
                 <rect x="6.5" y="5" width="3" height="10" rx="0.5"/>
@@ -115,7 +115,7 @@ export default function Courses() {
             </button>
 
             {/* Category */}
-            <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black transition-colors">
+            <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black cursor-pointer active:scale-95 transition-all">
               <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 1L2 10h12L8 1z"/>
                 <rect x="2" y="12" width="12" height="3" rx="0.5"/>
@@ -126,7 +126,7 @@ export default function Courses() {
 
           {/* Right: Most relevant */}
           <div className="flex items-center">
-            <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black transition-colors">
+            <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black cursor-pointer active:scale-95 transition-all">
               <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
                 <rect x="1" y="2" width="14" height="2" rx="0.5"/>
                 <rect x="1" y="7" width="10" height="2" rx="0.5"/>
@@ -145,7 +145,7 @@ export default function Courses() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`h-[43px] rounded-[21.5px] px-5 text-[14px] transition-all flex items-center justify-center ${
+                className={`h-[43px] rounded-[21.5px] px-5 text-[14px] transition-all flex items-center justify-center cursor-pointer active:scale-95 ${
                   isActive
                     ? 'bg-[#D4FB20] text-[#242528] font-medium shadow-sm'
                     : 'bg-[#F5F5F6] text-[#242528] font-normal hover:bg-gray-200'
@@ -174,7 +174,7 @@ export default function Courses() {
             <p className="text-sm text-[#82868E] mt-2">Try clearing your filters or search terms.</p>
             <button
               onClick={() => { setSearchQuery(''); setActiveCategory('Featured'); }}
-              className="mt-6 px-6 py-2.5 rounded-full bg-[#003BE2] text-white text-sm font-semibold hover:bg-blue-700"
+              className="mt-6 px-6 py-2.5 rounded-full bg-[#003BE2] text-white text-sm font-semibold hover:bg-blue-700 cursor-pointer active:scale-95 transition-all"
             >
               Reset Filters
             </button>
@@ -187,7 +187,7 @@ export default function Courses() {
           <button
             onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
             disabled={currentPage === 1}
-            className="w-[47px] h-[47px] rounded-full border border-[#CED0D3] bg-white flex items-center justify-center text-[#242528] hover:border-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            className="w-[47px] h-[47px] rounded-full border border-[#CED0D3] bg-white flex items-center justify-center text-[#242528] hover:border-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer active:scale-95 disabled:active:scale-100"
             aria-label="Previous Page"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -201,7 +201,7 @@ export default function Courses() {
                 <button
                   key={pageNum}
                   onClick={() => setCurrentPage(pageNum)}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center text-[15px] transition-colors ${
+                  className={`w-10 h-10 rounded-full flex items-center justify-center text-[15px] transition-colors cursor-pointer active:scale-95 ${
                     isSelected
                       ? 'font-bold text-[#242528]'
                       : 'font-normal text-[#82868E] hover:text-[#242528]'
@@ -217,7 +217,7 @@ export default function Courses() {
           <button
             onClick={() => setCurrentPage(p => Math.min(5, p + 1))}
             disabled={currentPage === 5}
-            className="w-[47px] h-[47px] rounded-full border border-[#CED0D3] bg-white flex items-center justify-center text-[#242528] hover:border-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            className="w-[47px] h-[47px] rounded-full border border-[#CED0D3] bg-white flex items-center justify-center text-[#242528] hover:border-black transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer active:scale-95 disabled:active:scale-100"
             aria-label="Next Page"
           >
             <ChevronRight className="w-5 h-5" />

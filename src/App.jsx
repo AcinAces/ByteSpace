@@ -20,9 +20,18 @@ function ScrollToTop() {
 
 function AnimatedRoutes() {
   const location = useLocation();
+  const [isAnimating, setIsAnimating] = React.useState(true);
+
+  React.useEffect(() => {
+    setIsAnimating(true);
+  }, [location.pathname]);
 
   return (
-    <div key={location.pathname} className="animate-page-enter">
+    <div
+      key={location.pathname}
+      className={isAnimating ? 'animate-page-enter' : ''}
+      onAnimationEnd={() => setIsAnimating(false)}
+    >
       <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
