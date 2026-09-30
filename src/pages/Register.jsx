@@ -3,17 +3,26 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Star } from 'lucide-react';
 import Logo from '../components/Logo';
 import GridBackground from '../components/GridBackground';
+import LoadingSpinner from '../components/LoadingSpinner';
+import { useLoading } from '../context/LoadingContext';
 
 export default function Register() {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
+  const { startLoading, stopLoading } = useLoading();
 
   const handleRegister = (e) => {
     e.preventDefault();
-    alert(`Account created successfully for ${fullName || 'User'}!`);
-    navigate('/login');
+    setIsSubmitting(true);
+    startLoading();
+    setTimeout(() => {
+      stopLoading();
+      setIsSubmitting(false);
+      navigate('/login');
+    }, 450);
   };
 
   return (
@@ -216,9 +225,10 @@ export default function Register() {
                   <div className="flex justify-end pt-2">
                     <button
                       type="submit"
-                      className="w-[123px] h-[46px] rounded-[23px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] hover:brightness-105 active:scale-95 transition-all flex items-center justify-center shadow-sm"
+                      disabled={isSubmitting}
+                      className="w-[123px] h-[46px] rounded-[23px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] hover:brightness-105 active:scale-95 transition-all flex items-center justify-center shadow-sm disabled:opacity-80"
                     >
-                      Continue
+                      {isSubmitting ? <LoadingSpinner size="xs" /> : 'Continue'}
                     </button>
                   </div>
                 </form>

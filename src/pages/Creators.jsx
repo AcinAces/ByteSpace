@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SlidersHorizontal, BarChart2, Layers, ArrowUpDown } from 'lucide-react';
+import { SlidersHorizontal, Layers, ArrowUpDown } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CourseCard from '../components/CourseCard';
@@ -90,7 +90,11 @@ export default function Creators() {
               <span>Filter</span>
             </button>
             <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium hover:border-brand-blue transition-colors">
-              <BarChart2 className="w-4 h-4 text-[#242528]" />
+              <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
+                <rect x="1" y="9" width="3" height="6" rx="0.5" />
+                <rect x="6.5" y="5" width="3" height="10" rx="0.5" />
+                <rect x="12" y="1" width="3" height="14" rx="0.5" />
+              </svg>
               <span>Level</span>
             </button>
             <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium hover:border-brand-blue transition-colors">
