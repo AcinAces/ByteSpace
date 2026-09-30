@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 
-export default function Navbar({ variant = 'blue' }) {
+export default function Navbar({ variant = 'blue', className = '' }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -12,11 +12,11 @@ export default function Navbar({ variant = 'blue' }) {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Courses', href: '/courses' },
-    { name: 'Creators', href: '/#creators' },
+    { name: 'Creators', href: '/creators' },
   ];
 
   return (
-    <header className={`w-full z-50 transition-colors ${isBlue ? 'bg-transparent text-white' : 'bg-white text-brand-dark border-b border-gray-100'}`}>
+    <header className={`w-full z-50 pt-4 sm:pt-6 lg:pt-8 transition-colors ${isBlue ? 'bg-transparent text-white' : 'bg-white text-brand-dark border-b border-gray-100'} ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
         {/* Left: Brand Logo */}
         <div className="flex-shrink-0">
@@ -24,17 +24,21 @@ export default function Navbar({ variant = 'blue' }) {
         </div>
 
         {/* Center: Nav Links (Desktop) */}
-        <nav className="hidden md:flex items-center gap-9 text-[15px] font-medium tracking-normal">
+        <nav className="hidden md:flex items-center gap-9 text-[15px] font-light tracking-normal">
           {navLinks.map((link) => {
-            const isActive = location.pathname === link.href;
+            const isActive = link.href === '/'
+              ? location.pathname === '/'
+              : location.pathname.startsWith(link.href);
             return (
               <Link
                 key={link.name}
                 to={link.href}
-                className={`transition-colors py-1 ${
+                className={`transition-all duration-200 py-1 inline-block transform ${
+                  isActive ? '-translate-y-[3.5px]' : 'translate-y-0'
+                } ${
                   isBlue
-                    ? isActive ? 'text-white font-semibold' : 'text-white/80 hover:text-white'
-                    : isActive ? 'text-brand-blue font-semibold' : 'text-brand-gray-500 hover:text-brand-dark'
+                    ? isActive ? 'text-white font-normal' : 'text-white/80 hover:text-white font-light'
+                    : isActive ? 'text-brand-blue font-medium' : 'text-brand-gray-500 hover:text-brand-dark font-light'
                 }`}
               >
                 {link.name}
@@ -47,16 +51,16 @@ export default function Navbar({ variant = 'blue' }) {
         <div className="hidden md:flex items-center gap-7 text-[15px]">
           <Link
             to="/login"
-            className={`font-medium transition-colors ${
-              isBlue ? 'text-white/90 hover:text-white' : 'text-brand-dark hover:text-brand-blue'
+            className={`font-light transition-colors ${
+              isBlue ? 'text-white/80 hover:text-white' : 'text-brand-dark hover:text-brand-blue'
             }`}
           >
             Sign In
           </Link>
           <Link
             to="/register"
-            className={`font-medium transition-colors ${
-              isBlue ? 'text-white/90 hover:text-white' : 'text-brand-dark hover:text-brand-blue'
+            className={`font-light transition-colors ${
+              isBlue ? 'text-white/80 hover:text-white' : 'text-brand-dark hover:text-brand-blue'
             }`}
           >
             Join Us
@@ -114,16 +118,23 @@ export default function Navbar({ variant = 'blue' }) {
           isBlue ? 'bg-brand-blue/98 border-white/10 text-white' : 'bg-white border-gray-100 text-brand-dark'
         }`}>
           <div className="flex flex-col gap-4 text-base font-medium">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="py-1 hover:opacity-80"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.href === '/'
+                ? location.pathname === '/'
+                : location.pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-1 transition-colors ${
+                    isActive ? 'font-semibold text-white' : 'font-light text-white/80 hover:text-white'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
             <hr className={isBlue ? 'border-white/10' : 'border-gray-100'} />
             <div className="flex flex-col gap-3 pt-2">
               <Link

@@ -88,7 +88,7 @@ export default function Footer() {
             {/* Column 3 */}
             <div className="flex flex-col gap-3.5">
               <span className="font-semibold text-brand-dark">Become a Creator</span>
-              <Link to="/#creators" className="text-brand-gray-500 hover:text-brand-blue transition-colors">
+              <Link to="/creators" className="text-brand-gray-500 hover:text-brand-blue transition-colors">
                 Affiliate Program
               </Link>
               <Link to="/#contact" className="text-brand-gray-500 hover:text-brand-blue transition-colors">

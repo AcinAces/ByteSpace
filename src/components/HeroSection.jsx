@@ -18,7 +18,7 @@ export default function HeroSection() {
   return (
     <div className="relative w-full flex-grow flex flex-col justify-between overflow-hidden text-white pt-4 sm:pt-6 pb-0 select-none">
       {/* 
-        Background SVG Grid and Lime Aura Ring 
+        Lime Circle Aura behind student (solid lime dome)
         Exact mathematical reproduction from Home.svg (viewBox 0 0 1440 1024)
       */}
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
@@ -28,36 +28,6 @@ export default function HeroSection() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Subtle Grid Lines (opacity 0.12) extending seamlessly */}
-          <g opacity="0.12">
-            <line x1="-239" y1="0" x2="-239" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="-119" y1="0" x2="-119" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1" y1="0" x2="1" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="121" y1="0" x2="121" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="241" y1="0" x2="241" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="361" y1="0" x2="361" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="481" y1="0" x2="481" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="601" y1="0" x2="601" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="721" y1="0" x2="721" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="841" y1="0" x2="841" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="961" y1="0" x2="961" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1081" y1="0" x2="1081" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1201" y1="0" x2="1201" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1321" y1="0" x2="1321" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1441" y1="0" x2="1441" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1561" y1="0" x2="1561" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1681" y1="0" x2="1681" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="959" x2="1940" y2="959" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="839" x2="1940" y2="839" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="719" x2="1940" y2="719" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="605" x2="1940" y2="605" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="479" x2="1940" y2="479" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="359" x2="1940" y2="359" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="239" x2="1940" y2="239" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="119" x2="1940" y2="119" stroke="white" strokeWidth="2" />
-          </g>
-
-          {/* Lime Circle Aura behind student (solid lime dome) */}
           <circle cx="719.5" cy="1156.5" r="574.5" fill="#CBFC01" />
         </svg>
       </div>
@@ -113,15 +83,15 @@ export default function HeroSection() {
       {/* Main Content Area */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center z-20 flex-grow flex flex-col justify-between w-full">
         {/* Top Text Content */}
-        <div className="max-w-4xl mx-auto pt-2 lg:pt-4">
-          {/* Headings: exact Figma font-size 56px, bold, 1.14 line-height */}
-          <h1 className="text-[34px] sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.14] max-w-4xl mx-auto font-sans">
+        <div className="max-w-5xl mx-auto pt-2 lg:pt-4">
+          {/* Headings: Increased size and spacing, balanced weight */}
+          <h1 className="text-[36px] sm:text-[52px] lg:text-[66px] xl:text-[72px] font-semibold tracking-[0.015em] leading-[1.16] max-w-5xl mx-auto font-sans">
             Get Access to Hundreds <br className="hidden sm:inline" />
             <span>Courses Available</span>
           </h1>
 
-          {/* Subtitle: exact Figma single line 16px #E5E6E8 */}
-          <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-[16px] text-[#E5E6E8] max-w-3xl mx-auto font-normal leading-relaxed px-2 xl:whitespace-nowrap">
+          {/* Subtitle: Decreased thickness to extra-light (font-[200]) */}
+          <p className="mt-3.5 sm:mt-4 text-sm sm:text-base lg:text-[17px] text-[#E5E6E8]/90 max-w-3xl mx-auto font-extralight tracking-wide leading-relaxed px-2 xl:whitespace-nowrap">
             Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
           </p>
 
@@ -161,47 +131,51 @@ export default function HeroSection() {
             />
 
             {/* Floating Badge 1: UI/UX Design (Figma: x=404, y=639, w=208, h=70, rx=16) */}
-            <div className="absolute top-10 sm:top-14 -left-2 sm:-left-12 lg:-left-16 bg-white rounded-[16px] p-3 sm:p-3.5 text-left shadow-2xl border border-gray-100 hidden sm:block animate-float select-none">
-              <span className="block font-bold text-xs sm:text-[14px] text-[#242528]">
+            <div className="absolute top-10 sm:top-14 lg:top-[127px] -left-2 sm:-left-8 lg:-left-[27px] w-[180px] sm:w-[208px] h-[64px] sm:h-[70px] bg-white rounded-[16px] px-4 py-2.5 sm:py-3 text-left shadow-[0px_16px_36px_rgba(0,0,0,0.08)] hidden sm:flex flex-col justify-center select-none z-20">
+              <span className="block font-bold text-[14px] sm:text-[15px] text-[#242528] leading-tight">
                 UI/UX Design
               </span>
-              <span className="block text-[11px] text-[#82868E] mt-0.5 font-normal">
+              <span className="block text-[11px] sm:text-[12px] text-[#82868E] mt-1 font-normal leading-none">
                 200 Courses • 1000+ Students
               </span>
             </div>
 
-            {/* Floating Badge 2: Learning Progress (Figma: x=842, y=651, w=232, h=131, rx=16, fill #D4FB20) */}
-            <div className="absolute top-14 sm:top-20 -right-2 sm:-right-10 lg:-right-14 bg-white rounded-[16px] p-3.5 sm:p-4 text-left shadow-2xl border border-gray-100 min-w-[150px] sm:min-w-[180px] hidden sm:block animate-float-reverse select-none">
-              <span className="block text-[11px] sm:text-[12px] text-[#82868E] font-normal">
-                Learning Progress
-              </span>
-              <span className="block font-extrabold text-2xl sm:text-[30px] text-[#242528] mt-0.5 leading-none">
-                55%
-              </span>
-              <div className="mt-2.5 w-full h-2 bg-[#F6F6F6] rounded-full overflow-hidden">
+            {/* Floating Badge 2: Learning Progress (Figma: x=842, y=651, w=232, h=131, rx=16) */}
+            <div className="absolute top-14 sm:top-16 lg:top-[139px] -right-2 sm:-right-8 lg:-right-[65px] w-[190px] sm:w-[232px] h-[115px] sm:h-[131px] bg-white rounded-[16px] p-3.5 sm:p-5 text-left shadow-[0px_16px_36px_rgba(0,0,0,0.08)] hidden sm:flex flex-col justify-between select-none z-20">
+              <div>
+                <span className="block text-[12px] sm:text-[13px] text-[#82868E] font-normal leading-none">
+                  Learning Progress
+                </span>
+                <span className="block font-extrabold text-[28px] sm:text-[34px] text-[#242528] mt-1.5 leading-none tracking-tight">
+                  55%
+                </span>
+              </div>
+              <div className="w-full h-2 bg-[#F6F6F6] rounded-full overflow-hidden">
                 <div className="w-[56%] h-full bg-[#D4FB20] rounded-full" />
               </div>
             </div>
 
-            {/* Floating Badge 3: Happy Students (Figma: x=328, y=837, w=258, h=121, rx=16, 8 circles with 2K+ #D4FB20) */}
-            <div className="absolute bottom-6 sm:bottom-10 -left-4 sm:-left-16 lg:-left-20 bg-white rounded-[16px] p-3 sm:p-4 text-left shadow-2xl border border-gray-100 animate-float select-none">
-              <span className="block font-bold text-xs sm:text-[14px] text-[#242528]">
-                Happy Students
-              </span>
-              <div className="flex items-center gap-1.5 text-xs text-[#242528] font-bold mt-0.5">
-                <span>4.5</span>
-                <span className="text-[#82868E] font-normal text-[11px]">(240)</span>
-                <Star className="w-3.5 h-3.5 fill-[#D4FB20] text-[#D4FB20]" />
+            {/* Floating Badge 3: Happy Students (Figma: x=328, y=837, w=258, h=121, rx=16) */}
+            <div className="absolute bottom-6 sm:bottom-8 lg:top-[325px] lg:bottom-auto -left-4 sm:-left-12 lg:-left-[103px] w-[220px] sm:w-[258px] h-[105px] sm:h-[121px] bg-white rounded-[16px] p-3 sm:p-4 text-left shadow-[0px_16px_36px_rgba(0,0,0,0.08)] flex flex-col justify-between select-none z-20">
+              <div>
+                <span className="block font-bold text-[13px] sm:text-[15px] text-[#242528] leading-tight">
+                  Happy Students
+                </span>
+                <div className="flex items-center gap-1.5 text-xs text-[#242528] font-bold mt-0.5">
+                  <span className="text-[12px] sm:text-[13px]">4.5</span>
+                  <span className="text-[#82868E] font-normal text-[11px] sm:text-[12px]">(240)</span>
+                  <Star className="w-3.5 h-3.5 fill-[#D4FB20] text-[#D4FB20]" />
+                </div>
               </div>
-              <div className="flex items-center -space-x-2 mt-2.5">
-                <img src="/images/image1_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
-                <img src="/images/image2_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
-                <img src="/images/image3_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
-                <img src="/images/image4_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
-                <img src="/images/image5_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
-                <img src="/images/image6_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
-                <img src="/images/image7_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
-                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[9px] sm:text-[10px] font-extrabold flex items-center justify-center">
+              <div className="flex items-center -space-x-1.5 sm:-space-x-2">
+                <img src="/images/image1_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
+                <img src="/images/image2_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
+                <img src="/images/image3_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
+                <img src="/images/image4_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
+                <img src="/images/image5_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
+                <img src="/images/image6_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
+                <img src="/images/image7_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
+                <div className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[8px] sm:text-[10px] font-extrabold flex items-center justify-center flex-shrink-0">
                   2K+
                 </div>
               </div>

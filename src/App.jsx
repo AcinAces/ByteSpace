@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Courses from './pages/Courses';
+import Creators from './pages/Creators';
 import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/creators" element={<Creators />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

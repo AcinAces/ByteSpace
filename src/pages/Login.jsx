@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Star } from 'lucide-react';
 import Logo from '../components/Logo';
+import GridBackground from '../components/GridBackground';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -16,46 +17,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen w-full bg-[#003BE2] relative flex flex-col justify-between overflow-x-hidden select-none">
-      {/* 
-        Background SVG Grid (viewBox matching 1440x1024 Figma canvas)
-      */}
-      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
-        <svg
-          className="absolute left-1/2 -translate-x-1/2 top-0 w-[1440px] h-full min-h-[1024px] max-w-none pointer-events-none"
-          viewBox="0 0 1440 1024"
-          preserveAspectRatio="none"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g opacity="0.12">
-            <line x1="-239" y1="0" x2="-239" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="-119" y1="0" x2="-119" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1" y1="0" x2="1" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="121" y1="0" x2="121" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="241" y1="0" x2="241" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="361" y1="0" x2="361" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="481" y1="0" x2="481" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="601" y1="0" x2="601" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="721" y1="0" x2="721" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="841" y1="0" x2="841" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="961" y1="0" x2="961" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1081" y1="0" x2="1081" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1201" y1="0" x2="1201" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1321" y1="0" x2="1321" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1441" y1="0" x2="1441" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1561" y1="0" x2="1561" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="1681" y1="0" x2="1681" y2="1024" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="959" x2="1940" y2="959" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="839" x2="1940" y2="839" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="719" x2="1940" y2="719" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="605" x2="1940" y2="605" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="479" x2="1940" y2="479" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="359" x2="1940" y2="359" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="239" x2="1940" y2="239" stroke="white" strokeWidth="2" />
-            <line x1="-500" y1="119" x2="1940" y2="119" stroke="white" strokeWidth="2" />
-          </g>
-        </svg>
-      </div>
+      <GridBackground />
 
       {/* Main Container */}
       <div className="relative z-10 max-w-[1440px] mx-auto w-full min-h-screen flex flex-col justify-between px-6 sm:px-12 lg:px-[120px] py-8 lg:py-[48px]">
