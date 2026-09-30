@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Courses from './pages/Courses';
 import Creators from './pages/Creators';
 import NotFound from './pages/NotFound';
+import { LoadingProvider } from './context/LoadingContext';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -17,11 +18,12 @@ function ScrollToTop() {
   return null;
 }
 
-export default function App() {
+function AnimatedRoutes() {
+  const location = useLocation();
+
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
+    <div key={location.pathname} className="animate-page-enter">
+      <Routes location={location}>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -29,6 +31,17 @@ export default function App() {
         <Route path="/creators" element={<Creators />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <LoadingProvider>
+        <ScrollToTop />
+        <AnimatedRoutes />
+      </LoadingProvider>
     </Router>
   );
 }

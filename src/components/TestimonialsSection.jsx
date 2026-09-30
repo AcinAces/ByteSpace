@@ -4,6 +4,73 @@ import { testimonialsData } from '../data/testimonialsData';
 export default function TestimonialsSection() {
   return (
     <section className="relative w-full py-20 lg:py-28 bg-[#FAFAFA] overflow-hidden">
+      {/* 
+        Exact Ambient Lighting Glows from Figma Home.svg:
+        1. Vibrant Lime Glows behind the right side text and right cards (#CBFC01)
+        2. Soft Electric Blue Glow behind bottom-left card (#003BE2)
+      */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <svg
+          className="absolute left-1/2 -translate-x-1/2 top-0 w-[1440px] h-full max-w-none pointer-events-none"
+          viewBox="0 0 1440 784"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <filter id="test-blur-1" x="802" y="-281" width="1217" height="1217" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur" />
+            </filter>
+            <filter id="test-blur-2" x="355" y="-178" width="752" height="752" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur" />
+            </filter>
+            <filter id="test-blur-3" x="-482" y="109" width="1217" height="1217" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur" />
+            </filter>
+
+            <radialGradient id="test-lime-1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1410.5 327.5) rotate(90) scale(568.5)">
+              <stop stopColor="#CBFC01" />
+              <stop offset="0.53" stopColor="#CBFC01" stopOpacity="0.23" />
+              <stop offset="0.75" stopColor="#CBFC01" stopOpacity="0.06" />
+              <stop offset="1" stopColor="#CBFC01" stopOpacity="0" />
+            </radialGradient>
+
+            <radialGradient id="test-lime-2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(731 198) rotate(90) scale(336)">
+              <stop stopColor="#CBFC01" />
+              <stop offset="0.53" stopColor="#CBFC01" stopOpacity="0.23" />
+              <stop offset="0.75" stopColor="#CBFC01" stopOpacity="0.06" />
+              <stop offset="1" stopColor="#CBFC01" stopOpacity="0" />
+            </radialGradient>
+
+            <radialGradient id="test-blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(126.5 717.5) rotate(90) scale(568.5)">
+              <stop stopColor="#003BE2" />
+              <stop offset="0.53" stopColor="#003BE2" stopOpacity="0.23" />
+              <stop offset="0.75" stopColor="#003BE2" stopOpacity="0.06" />
+              <stop offset="1" stopColor="#003BE2" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+
+          <g filter="url(#test-blur-1)">
+            <circle cx="1410.5" cy="327.5" r="568.5" fill="url(#test-lime-1)" fillOpacity="0.4" />
+          </g>
+          <g filter="url(#test-blur-2)">
+            <circle cx="731" cy="198" r="336" fill="url(#test-lime-2)" fillOpacity="0.6" />
+          </g>
+          <g filter="url(#test-blur-3)">
+            <circle cx="126.5" cy="717.5" r="568.5" fill="url(#test-blue)" fillOpacity="0.24" />
+          </g>
+        </svg>
+
+        {/* Responsive CSS glow fallbacks for ultra-wide & mobile viewports */}
+        <div className="absolute -top-10 right-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(203,252,1,0.32),transparent_70%)] pointer-events-none" />
+        <div className="absolute -bottom-10 left-0 w-[550px] h-[550px] bg-[radial-gradient(ellipse_at_center,rgba(0,59,226,0.14),transparent_70%)] pointer-events-none" />
+      </div>
+
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12 z-10">
         {/* Top Header Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16">

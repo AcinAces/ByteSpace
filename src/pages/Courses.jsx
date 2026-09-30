@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CourseCard from '../components/CourseCard';
 import GridBackground from '../components/GridBackground';
+import LoadingSpinner from '../components/LoadingSpinner';
+import { useLoading } from '../context/LoadingContext';
 import { coursesData, courseCategories } from '../data/coursesData';
 
 export default function Courses() {
@@ -15,6 +17,18 @@ export default function Courses() {
   const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [searchQuery, setSearchQuery] = useState(initialSearch);
   const [currentPage, setCurrentPage] = useState(1);
+  const [isFiltering, setIsFiltering] = useState(false);
+  const { startLoading, stopLoading } = useLoading();
+
+  useEffect(() => {
+    setIsFiltering(true);
+    startLoading();
+    const timer = setTimeout(() => {
+      setIsFiltering(false);
+      stopLoading();
+    }, 280);
+    return () => clearTimeout(timer);
+  }, [activeCategory, searchQuery, currentPage, startLoading, stopLoading]);
 
   // 18 courses matching 6 rows x 3 columns of Search Page.svg
   const catalogCourses = [
@@ -144,7 +158,11 @@ export default function Courses() {
         </div>
 
         {/* Courses Grid (3 Columns, 6 Rows matching Search Page.svg) */}
-        {filteredCourses.length > 0 ? (
+        {isFiltering ? (
+          <div className="py-24 flex flex-col items-center justify-center">
+            <LoadingSpinner size="lg" label="Loading courses..." />
+          </div>
+        ) : filteredCourses.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
             {filteredCourses.map((course, idx) => (
               <CourseCard key={`${course.id}_${idx}`} course={course} />

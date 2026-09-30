@@ -1,5 +1,4 @@
 import React from 'react';
-import { CheckCircle2, Star } from 'lucide-react';
 
 const benefits = [
   'Share Your Expertise',
@@ -10,10 +9,87 @@ const benefits = [
 
 export default function CreatorManageSection() {
   return (
-    <section className="w-full bg-[#FAFAFA] py-20 lg:py-28 overflow-hidden" id="creators">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="relative w-full bg-[#FAFAFA] pt-8 lg:pt-12 pb-16 lg:pb-24 overflow-hidden" id="creators">
+      {/* Ambient decorative glows matching Figma Home.svg */}
+      <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-[radial-gradient(circle_at_left,rgba(0,59,226,0.12),transparent_70%)] pointer-events-none" />
+      {/* Bottom-Left Vibrant Lime Glow (Figma: paint4_radial_0_1 cx=49, cy=4402, r=336, opacity=0.6) */}
+      <div className="absolute -bottom-16 left-0 w-[550px] h-[550px] bg-[radial-gradient(circle_at_bottom_left,rgba(203,252,1,0.5),transparent_70%)] pointer-events-none" />
+      {/* Bottom-Right Electric Blue Glow (Figma: paint0_radial_0_1 cx=1290.5, cy=4476.5, r=568.5, opacity=0.24) */}
+      <div className="absolute -bottom-16 right-0 w-[650px] h-[650px] bg-[radial-gradient(circle_at_bottom_right,rgba(0,59,226,0.22),transparent_70%)] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Heading and Checklist */}
+          {/* Left Column: Visual Composition with Woman Creator & Revenue Badges */}
+          <div className="lg:col-span-6 relative flex justify-center lg:justify-start items-center">
+            {/* Composition Canvas matching Figma coordinates (w=540px, h=560px) */}
+            <div className="relative w-full max-w-[520px] h-[480px] sm:h-[540px] flex items-center justify-center">
+              {/* Lime Spring Doodle behind woman's right shoulder (Figma: right side, top=114px) */}
+              <img
+                src="/images/growth-doodle-spring-lime.png"
+                alt=""
+                className="absolute right-0 sm:right-4 top-20 sm:top-24 w-32 sm:w-40 h-auto object-contain select-none pointer-events-none z-0"
+              />
+
+              {/* Woman Cutout directly on background - NO white container box! (Figma: x=149, y=3864, w=435, h=596) */}
+              <img
+                src="/images/creator-woman.png"
+                alt="Create and Manage Courses"
+                className="relative z-10 w-[290px] sm:w-[370px] h-auto object-contain drop-shadow-xl"
+              />
+
+              {/* Floating Badge 1: Total Revenue (Figma: top-left, x=121, y=3908, w=232, h=119) */}
+              <div className="absolute top-6 sm:top-8 -left-2 sm:left-0 bg-[#003BE2] text-white p-3.5 sm:p-4 rounded-[16px] shadow-2xl w-[190px] sm:w-[230px] z-20">
+                <span className="block text-[11px] text-white/80 font-medium">Total Revenue</span>
+                <span className="block text-[10px] text-white/60">July 1-28</span>
+                <div className="flex items-center justify-between mt-1">
+                  <span className="text-xl sm:text-2xl font-extrabold">$120.29</span>
+                  <span className="px-2 py-0.5 rounded-full bg-[#CBFC01] text-[#242528] text-[10px] font-bold">
+                    +123
+                  </span>
+                </div>
+                {/* Lime Progress Bar (Figma: rx=4, fill=#D4FB20) */}
+                <div className="mt-2.5 w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+                  <div className="w-[56%] h-full bg-[#D4FB20] rounded-full" />
+                </div>
+              </div>
+
+              {/* Floating Badge 2: Year to Date (Figma: mid-left, x=121, y=4058, w=134, h=135 - compact square) */}
+              <div className="absolute top-40 sm:top-44 -left-2 sm:left-0 bg-[#003BE2] text-white p-3 sm:p-3.5 rounded-[16px] shadow-2xl w-[125px] sm:w-[134px] z-20">
+                <span className="block text-[11px] text-white/80 font-medium">Year to Date</span>
+                <span className="block text-[10px] text-white/60">2023</span>
+                <span className="block text-base sm:text-lg font-extrabold mt-0.5">$1,200.38</span>
+                <div className="mt-1.5">
+                  <span className="px-2 py-0.5 rounded-full bg-[#CBFC01] text-[#242528] text-[10px] font-bold inline-block">
+                    +123
+                  </span>
+                </div>
+              </div>
+
+              {/* Floating Badge 3: Happy Students (Figma: bottom-right, x=404, y=4277, w=258, h=123) */}
+              <div className="absolute bottom-2 sm:bottom-4 right-0 sm:right-2 bg-white text-[#242528] p-3.5 sm:p-4 rounded-[16px] shadow-2xl border border-gray-100 w-[215px] sm:w-[250px] z-20">
+                <span className="block font-bold text-xs sm:text-sm">Happy Students</span>
+                <div className="flex items-center gap-1.5 text-xs font-bold mt-0.5">
+                  <span>4.5</span>
+                  <span className="text-[#82868E] font-normal text-[11px]">(240)</span>
+                  <span className="text-[#D4FB20]">★</span>
+                </div>
+                {/* Overlapping Avatars + 2K+ badge matching Figma Home.svg */}
+                <div className="flex items-center -space-x-2 mt-2.5">
+                  <img src="/images/image1_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
+                  <img src="/images/image2_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
+                  <img src="/images/image3_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
+                  <img src="/images/image4_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
+                  <img src="/images/image5_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover" />
+                  <img src="/images/image6_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover hidden sm:block" />
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[9px] sm:text-[10px] font-extrabold flex items-center justify-center flex-shrink-0">
+                    2K+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Heading and Checklist */}
           <div className="lg:col-span-6 flex flex-col justify-center">
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#242528] tracking-tight leading-[1.15]">
               Create & Manage <br />
@@ -28,67 +104,16 @@ export default function CreatorManageSection() {
             <div className="mt-8 flex flex-col gap-4">
               {benefits.map((benefit) => (
                 <div key={benefit} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#003BE2] flex-shrink-0" />
+                  <div className="w-5 h-5 rounded-full bg-[#003BE2] flex items-center justify-center flex-shrink-0 text-white shadow-sm">
+                    <svg className="w-3 h-3 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </div>
                   <span className="font-semibold text-[#242528] text-sm sm:text-base">
                     {benefit}
                   </span>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Right Column: Visual Composition with Student, Course Card, and Flat Lime Doodle */}
-          <div className="lg:col-span-6 relative flex justify-center items-center">
-            {/* Flat Lime Doodle Spring from Figma Home.svg */}
-            <img
-              src="/images/creator-doodle-spring-lime.png"
-              alt=""
-              className="absolute -right-4 -top-10 w-36 sm:w-44 h-auto object-contain select-none pointer-events-none z-20"
-            />
-
-            {/* Composition Card Container */}
-            <div className="relative z-10 w-full max-w-md sm:max-w-lg">
-              {/* Underlying Course Card */}
-              <div className="bg-white rounded-[24px] p-4 border border-[#CED0D3] shadow-lg max-w-[372px] mx-auto">
-                <div className="relative w-full h-[195px] rounded-[12px] overflow-hidden bg-gray-100">
-                  <img
-                    src="/images/course-figma.jpg"
-                    alt="Course Preview"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between gap-1 text-[11px] font-medium">
-                    <span className="px-2.5 py-1 rounded-full bg-[#F6F6F6]/80 text-[#4F4F4F]">17 Lessons</span>
-                    <span className="px-2.5 py-1 rounded-full bg-[#F6F6F6]/80 text-[#4F4F4F]">2h 16m</span>
-                    <span className="px-2.5 py-1 rounded-full bg-[#F6F6F6]/80 text-[#4F4F4F]">59 Comments</span>
-                  </div>
-                </div>
-                <div className="pt-3">
-                  <div className="flex items-center justify-between">
-                    <h4 className="font-bold text-[17px] text-[#242528]">Learn Figma from Basic</h4>
-                    <div className="flex items-center gap-1 text-sm font-semibold text-[#242528]">
-                      <span>4.5</span>
-                      <Star className="w-4 h-4 fill-[#D4FB20] text-[#D4FB20]" />
-                    </div>
-                  </div>
-                  <p className="text-xs text-[#82868E] mt-1">by purepearl studio</p>
-                </div>
-              </div>
-
-              {/* Student cutout floating slightly forward */}
-              <img
-                src="/images/image0_0_1.png"
-                alt="Instructor"
-                className="absolute -right-6 sm:-right-10 bottom-0 w-[260px] sm:w-[320px] h-auto object-contain select-none pointer-events-none drop-shadow-xl"
-              />
-
-              {/* Floating Learning Progress Badge */}
-              <div className="absolute -bottom-6 -left-2 sm:-left-6 bg-white rounded-[16px] p-4 shadow-xl border border-gray-100 min-w-[170px] z-20">
-                <span className="block text-xs text-[#82868E]">Learning Progress</span>
-                <span className="block text-2xl font-extrabold text-[#242528] mt-0.5">55%</span>
-                <div className="mt-2 w-full h-2 bg-[#F6F6F6] rounded-full overflow-hidden">
-                  <div className="w-[56%] h-full bg-[#D4FB20] rounded-full" />
-                </div>
-              </div>
             </div>
           </div>
         </div>

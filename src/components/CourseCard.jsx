@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, BarChart2 } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function CourseCard({ course }) {
@@ -65,7 +65,15 @@ export default function CourseCard({ course }) {
         <div className="flex items-center justify-between pt-1">
           {/* Level Pill */}
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F5F5F6] text-[#242528] text-xs font-medium">
-            <BarChart2 className="w-3.5 h-3.5 text-[#82868E]" />
+            <svg
+              className="w-3 h-3 text-[#4B4C53] flex-shrink-0"
+              viewBox="0 0 13 14"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d="M10 0H12.5V13.34H10V0ZM0 8.34H2.5V13.34H0V8.34ZM5 4.17H7.5V13.34H5V4.17Z" />
+            </svg>
             <span>{level}</span>
           </div>
 

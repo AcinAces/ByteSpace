@@ -3,16 +3,25 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Star } from 'lucide-react';
 import Logo from '../components/Logo';
 import GridBackground from '../components/GridBackground';
+import LoadingSpinner from '../components/LoadingSpinner';
+import { useLoading } from '../context/LoadingContext';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
+  const { startLoading, stopLoading } = useLoading();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    alert(`Welcome back, ${email || 'User'}!`);
-    navigate('/');
+    setIsSubmitting(true);
+    startLoading();
+    setTimeout(() => {
+      stopLoading();
+      setIsSubmitting(false);
+      navigate('/');
+    }, 450);
   };
 
   return (
@@ -203,9 +212,10 @@ export default function Login() {
                   <div className="flex justify-end pt-2">
                     <button
                       type="submit"
-                      className="w-[104px] h-[46px] rounded-[23px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] hover:brightness-105 active:scale-95 transition-all flex items-center justify-center shadow-sm"
+                      disabled={isSubmitting}
+                      className="w-[104px] h-[46px] rounded-[23px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] hover:brightness-105 active:scale-95 transition-all flex items-center justify-center shadow-sm disabled:opacity-80"
                     >
-                      Sign In
+                      {isSubmitting ? <LoadingSpinner size="xs" /> : 'Sign In'}
                     </button>
                   </div>
                 </form>
