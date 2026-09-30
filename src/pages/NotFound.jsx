@@ -5,38 +5,90 @@ import Footer from '../components/Footer';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      <Navbar variant="blue" />
-
-      {/* 404 Hero Section */}
-      <main className="flex-grow bg-brand-blue bg-grid-pattern py-24 sm:py-32 flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
-        {/* Giant 404 text with gradient */}
-        <div className="relative select-none">
-          <span className="text-[130px] sm:text-[200px] lg:text-[240px] font-black tracking-tight leading-none bg-gradient-to-b from-[#D4FB20] to-[#A2DC18] bg-clip-text text-transparent opacity-95 drop-shadow-sm">
-            404
-          </span>
-        </div>
-
-        {/* Message */}
-        <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight max-w-2xl">
-          The page you are looking for doesn’t exist
-        </h1>
-
-        <p className="mt-4 text-white/80 text-sm sm:text-base max-w-md">
-          Try to use a correct url or go back to homepage to start again
-        </p>
-
-        {/* Action Button */}
-        <div className="mt-8">
-          <Link
-            to="/"
-            className="px-8 py-3.5 rounded-full bg-brand-lime text-black font-bold text-sm sm:text-base hover:brightness-105 active:scale-95 transition-all shadow-lime inline-block"
+    <div className="min-h-screen flex flex-col bg-white select-none">
+      {/* 
+        Hero 404 Section (Height 957px matching Figma 404 Not Found.svg)
+      */}
+      <section className="relative w-full h-[957px] bg-[#003BE2] flex flex-col justify-between overflow-hidden text-white">
+        {/* SVG Grid Lines Background (opacity 0.12) */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
+          <svg
+            className="absolute left-1/2 -translate-x-1/2 top-0 w-[1440px] h-full max-w-none pointer-events-none"
+            viewBox="0 0 1440 957"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Back to Home
-          </Link>
+            <g opacity="0.12">
+              <line x1="-239" y1="0" x2="-239" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="-119" y1="0" x2="-119" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="1" y1="0" x2="1" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="121" y1="0" x2="121" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="241" y1="0" x2="241" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="361" y1="0" x2="361" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="481" y1="0" x2="481" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="601" y1="0" x2="601" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="721" y1="0" x2="721" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="841" y1="0" x2="841" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="961" y1="0" x2="961" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="1081" y1="0" x2="1081" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="1201" y1="0" x2="1201" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="1321" y1="0" x2="1321" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="1441" y1="0" x2="1441" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="1561" y1="0" x2="1561" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="1681" y1="0" x2="1681" y2="957" stroke="white" strokeWidth="2" />
+              <line x1="-500" y1="839" x2="1940" y2="839" stroke="white" strokeWidth="2" />
+              <line x1="-500" y1="719" x2="1940" y2="719" stroke="white" strokeWidth="2" />
+              <line x1="-500" y1="605" x2="1940" y2="605" stroke="white" strokeWidth="2" />
+              <line x1="-500" y1="479" x2="1940" y2="479" stroke="white" strokeWidth="2" />
+              <line x1="-500" y1="359" x2="1940" y2="359" stroke="white" strokeWidth="2" />
+              <line x1="-500" y1="239" x2="1940" y2="239" stroke="white" strokeWidth="2" />
+              <line x1="-500" y1="119" x2="1940" y2="119" stroke="white" strokeWidth="2" />
+            </g>
+          </svg>
         </div>
-      </main>
 
+        {/* Top Navbar */}
+        <div className="relative z-20">
+          <Navbar variant="blue" />
+        </div>
+
+        {/* Center 404 Content */}
+        <div className="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-6">
+          {/* Exact 404 Vector with Figma Linear Gradient */}
+          <div className="relative flex items-center justify-center -mb-28 pointer-events-none select-none">
+            <img
+              src="/images/404-number.svg"
+              alt="404"
+              className="w-[600px] sm:w-[750px] lg:w-[860px] h-auto object-contain opacity-95"
+            />
+          </div>
+
+          {/* Heading overlapping the bottom of 404 */}
+          <h1 className="relative z-20 text-[36px] sm:text-[48px] lg:text-[56px] font-extrabold text-white tracking-tight leading-[1.15] max-w-[800px]">
+            The page you are looking for doesn’t exist
+          </h1>
+
+          <p className="relative z-20 mt-4 text-[#F5F5F6]/80 text-[15px] sm:text-[16px] max-w-[500px]">
+            Try to use a correct url or go back to homepage to start again
+          </p>
+
+          {/* Action Button */}
+          <div className="relative z-20 mt-8">
+            <Link
+              to="/"
+              className="w-[163px] h-[46px] rounded-[23px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] hover:brightness-105 active:scale-95 transition-all flex items-center justify-center shadow-sm"
+            >
+              Back to Home
+            </Link>
+          </div>
+        </div>
+
+        {/* Spacer at bottom of hero */}
+        <div className="h-12"></div>
+      </section>
+
+      {/* Footer */}
       <Footer />
     </div>
   );

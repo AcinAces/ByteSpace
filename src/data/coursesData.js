@@ -2,6 +2,7 @@ export const coursesData = [
   {
     id: 1,
     title: "Learn Figma from Basic",
+    shortTitle: "Learn Figma from Basic",
     author: "purepearl studio",
     rating: 4.5,
     lessons: "17 Lessons",
@@ -10,13 +11,14 @@ export const coursesData = [
     level: "Beginner",
     price: "$25",
     period: "/lifetime",
-    image: "/images/course-figma.jpg",
+    image: "/images/search-course-1.png",
     category: "UI/UX Design",
     featured: true
   },
   {
     id: 2,
     title: "Build Digital Asset",
+    shortTitle: "Build Digital Asset",
     author: "purepearl studio",
     rating: 4.5,
     lessons: "17 Lessons",
@@ -25,13 +27,14 @@ export const coursesData = [
     level: "Beginner",
     price: "$25",
     period: "/lifetime",
-    image: "/images/course-digital-asset.jpg",
+    image: "/images/search-course-2.png",
     category: "Design",
     featured: true
   },
   {
     id: 3,
     title: "the Power of Big Data",
+    shortTitle: "the Power of Big Data",
     author: "purepearl studio",
     rating: 4.5,
     lessons: "17 Lessons",
@@ -40,7 +43,7 @@ export const coursesData = [
     level: "Beginner",
     price: "$25",
     period: "/lifetime",
-    image: "/images/course-big-data.jpg",
+    image: "/images/search-course-3.png",
     category: "Data Science",
     featured: true
   },
@@ -56,7 +59,7 @@ export const coursesData = [
     level: "Beginner",
     price: "$25",
     period: "/lifetime",
-    image: "/images/course-productivity.jpg",
+    image: "/images/search-course-4.png",
     category: "Productivity",
     featured: true
   },
@@ -72,7 +75,7 @@ export const coursesData = [
     level: "Beginner",
     price: "$25",
     period: "/lifetime",
-    image: "/images/course-money.jpg",
+    image: "/images/search-course-5.png",
     category: "Business",
     featured: true
   },
@@ -88,7 +91,7 @@ export const coursesData = [
     level: "Beginner",
     price: "$25",
     period: "/lifetime",
-    image: "/images/course-startup.jpg",
+    image: "/images/search-course-6.png",
     category: "Freelance & Entrepreneurship",
     featured: true
   }
@@ -103,14 +106,5 @@ export const courseCategories = [
   "Social Media",
   "UI/UX Design",
   "Creative Marketing",
-  "Digital Illustration",
-  "Film & Video",
-  "Crafts",
-  "Freelance & Entrepreneurship",
-  "Graphic Design",
-  "Photography",
-  "Productivity",
-  "Web Development",
-  "Data Science",
   "Cooking"
 ];

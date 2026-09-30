@@ -13,9 +13,17 @@ import Footer from '../components/Footer';
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Navbar variant="blue" />
-      <main className="flex-grow">
+      {/* 
+        Full-Screen Electric Blue Hero Wrapper:
+        Contains Navbar + HeroSection, guaranteed to fill 100vh of display screen 
+        with zero premature white space at the bottom on all screen heights.
+      */}
+      <div className="relative w-full bg-brand-blue min-h-screen flex flex-col justify-between overflow-hidden">
+        <Navbar variant="blue" />
         <HeroSection />
+      </div>
+
+      <main className="flex-grow">
         <PartnersSection />
         <CoursesSection />
         <LearningPathsSection />
@@ -24,6 +32,7 @@ export default function Home() {
         <CreatorCTASection />
         <TestimonialsSection />
       </main>
+
       <Footer />
     </div>
   );

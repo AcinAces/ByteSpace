@@ -28,3 +28,6 @@ extracted_assets
 
 # Design source files (Figma SVG exports)
 design/
+
+# Local audit and helper scripts
+scripts/
