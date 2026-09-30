@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Search, Star } from 'lucide-react';
 
 export default function HeroSection() {
@@ -16,7 +16,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="relative w-full flex-grow flex flex-col justify-between overflow-hidden text-white pt-4 sm:pt-6 pb-0 select-none">
+    <div className="relative w-full flex-grow flex flex-col justify-between overflow-hidden text-white pt-4 sm:pt-6 pb-0 select-text">
       {/* 
         Lime Circle Aura behind student (solid lime dome)
         Exact mathematical reproduction from Home.svg (viewBox 0 0 1440 1024)
@@ -131,17 +131,23 @@ export default function HeroSection() {
             />
 
             {/* Floating Badge 1: UI/UX Design (Figma: x=404, y=639, w=208, h=70, rx=16) */}
-            <div className="absolute top-10 sm:top-14 lg:top-[127px] -left-2 sm:-left-8 lg:-left-[27px] w-[180px] sm:w-[208px] h-[64px] sm:h-[70px] bg-white rounded-[16px] px-4 py-2.5 sm:py-3 text-left shadow-[0px_16px_36px_rgba(0,0,0,0.08)] hidden sm:flex flex-col justify-center select-none z-20">
-              <span className="block font-bold text-[14px] sm:text-[15px] text-[#242528] leading-tight">
+            <Link
+              to="/courses?category=Design"
+              className="absolute top-10 sm:top-14 lg:top-[127px] -left-2 sm:-left-8 lg:-left-[27px] w-[180px] sm:w-[208px] h-[64px] sm:h-[70px] bg-white rounded-[16px] px-4 py-2.5 sm:py-3 text-left shadow-[0px_16px_36px_rgba(0,0,0,0.08)] hidden sm:flex flex-col justify-center z-20 cursor-pointer hover:scale-105 active:scale-95 transition-all duration-200 group"
+            >
+              <span className="block font-bold text-[14px] sm:text-[15px] text-[#242528] leading-tight group-hover:text-brand-blue transition-colors">
                 UI/UX Design
               </span>
               <span className="block text-[11px] sm:text-[12px] text-[#82868E] mt-1 font-normal leading-none">
                 200 Courses • 1000+ Students
               </span>
-            </div>
+            </Link>
 
             {/* Floating Badge 2: Learning Progress (Figma: x=842, y=651, w=232, h=131, rx=16) */}
-            <div className="absolute top-14 sm:top-16 lg:top-[139px] -right-2 sm:-right-8 lg:-right-[65px] w-[190px] sm:w-[232px] h-[115px] sm:h-[131px] bg-white rounded-[16px] p-3.5 sm:p-5 text-left shadow-[0px_16px_36px_rgba(0,0,0,0.08)] hidden sm:flex flex-col justify-between select-none z-20">
+            <button
+              type="button"
+              className="absolute top-14 sm:top-16 lg:top-[139px] -right-2 sm:-right-8 lg:-right-[65px] w-[190px] sm:w-[232px] h-[115px] sm:h-[131px] bg-white rounded-[16px] p-3.5 sm:p-5 text-left shadow-[0px_16px_36px_rgba(0,0,0,0.08)] hidden sm:flex flex-col justify-between z-20 cursor-pointer hover:scale-105 active:scale-95 transition-all duration-200"
+            >
               <div>
                 <span className="block text-[12px] sm:text-[13px] text-[#82868E] font-normal leading-none">
                   Learning Progress
@@ -153,10 +159,10 @@ export default function HeroSection() {
               <div className="w-full h-2 bg-[#F6F6F6] rounded-full overflow-hidden">
                 <div className="w-[56%] h-full bg-[#D4FB20] rounded-full" />
               </div>
-            </div>
+            </button>
 
             {/* Floating Badge 3: Happy Students (Figma: x=328, y=837, w=258, h=121, rx=16) */}
-            <div className="absolute bottom-6 sm:bottom-8 lg:top-[325px] lg:bottom-auto -left-4 sm:-left-12 lg:-left-[103px] w-[220px] sm:w-[258px] h-[105px] sm:h-[121px] bg-white rounded-[16px] p-3 sm:p-4 text-left shadow-[0px_16px_36px_rgba(0,0,0,0.08)] flex flex-col justify-between select-none z-20">
+            <div className="absolute bottom-6 sm:bottom-8 lg:top-[325px] lg:bottom-auto -left-4 sm:-left-12 lg:-left-[103px] w-[220px] sm:w-[258px] h-[105px] sm:h-[121px] bg-white rounded-[16px] p-3 sm:p-4 text-left shadow-[0px_16px_36px_rgba(0,0,0,0.08)] flex flex-col justify-between z-20 cursor-pointer hover:scale-105 transition-all duration-200">
               <div>
                 <span className="block font-bold text-[13px] sm:text-[15px] text-[#242528] leading-tight">
                   Happy Students
@@ -168,14 +174,14 @@ export default function HeroSection() {
                 </div>
               </div>
               <div className="flex items-center -space-x-1.5 sm:-space-x-2">
-                <img src="/images/image1_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
-                <img src="/images/image2_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
-                <img src="/images/image3_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
-                <img src="/images/image4_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
-                <img src="/images/image5_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
-                <img src="/images/image6_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
-                <img src="/images/image7_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0" />
-                <div className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[8px] sm:text-[10px] font-extrabold flex items-center justify-center flex-shrink-0">
+                <img src="/images/image1_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
+                <img src="/images/image2_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
+                <img src="/images/image3_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
+                <img src="/images/image4_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
+                <img src="/images/image5_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
+                <img src="/images/image6_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
+                <img src="/images/image7_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
+                <div className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[8px] sm:text-[10px] font-extrabold flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform cursor-pointer">
                   2K+
                 </div>
               </div>

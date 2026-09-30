@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { coursesData, courseCategories } from '../data/coursesData';
 import CourseCard from './CourseCard';
 
 export default function CoursesSection() {
   const [activeCategory, setActiveCategory] = useState('Featured');
-  const [showAllCategories, setShowAllCategories] = useState(false);
-
-  const displayedCategories = showAllCategories 
-    ? courseCategories 
-    : courseCategories.slice(0, 17);
 
   const filteredCourses = activeCategory === 'Featured'
     ? coursesData
@@ -29,13 +25,13 @@ export default function CoursesSection() {
 
           {/* Category Filter Pills */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto">
-            {displayedCategories.map((category) => {
+            {courseCategories.map((category) => {
               const isActive = activeCategory === category;
               return (
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`text-xs sm:text-[13px] font-medium px-4 py-2 rounded-full transition-all duration-200 ${
+                  className={`text-xs sm:text-[13px] font-medium px-4 py-2 rounded-full transition-all duration-200 cursor-pointer active:scale-95 ${
                     isActive
                       ? 'bg-brand-lime text-black font-semibold shadow-sm'
                       : 'bg-brand-gray-100 text-brand-dark/80 hover:bg-brand-gray-200'
@@ -45,14 +41,12 @@ export default function CoursesSection() {
                 </button>
               );
             })}
-            {!showAllCategories && courseCategories.length > 17 && (
-              <button
-                onClick={() => setShowAllCategories(true)}
-                className="text-xs sm:text-[13px] font-semibold text-brand-blue hover:underline px-3 py-2"
-              >
-                + More
-              </button>
-            )}
+            <Link
+              to="/courses"
+              className="text-xs sm:text-[13px] font-semibold text-[#003BE2] hover:underline px-3 py-2 cursor-pointer active:scale-95 transition-all inline-flex items-center"
+            >
+              + More
+            </Link>
           </div>
         </div>
 

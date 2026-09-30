@@ -13,7 +13,7 @@ export default function Creators() {
   const creatorCourses = coursesData.slice(0, 6);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white select-none">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* 
         Top Hero Banner Section (Height 592px matching Figma Creator Profile.svg)
       */}
@@ -41,7 +41,7 @@ export default function Creators() {
                   <h1 className="text-2xl sm:text-3xl lg:text-[40px] font-extrabold text-white tracking-tight leading-tight">
                     PurePearl Studio
                   </h1>
-                  <span className="bg-[#D4FB20] text-[#040819] text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="bg-[#D4FB20] text-[#040819] text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:scale-105 active:scale-95 transition-transform">
                     Creator
                   </span>
                 </div>
@@ -62,17 +62,17 @@ export default function Creators() {
           {/* Stats Badges & Follow Button */}
           <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <span className="bg-white text-[#242528] px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm">
+              <button className="bg-white text-[#242528] px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm cursor-pointer hover:scale-105 active:scale-95 transition-all">
                 3 Products
-              </span>
-              <span className="bg-white text-[#242528] px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm">
+              </button>
+              <button className="bg-white text-[#242528] px-5 py-2.5 rounded-full text-sm font-semibold shadow-sm cursor-pointer hover:scale-105 active:scale-95 transition-all">
                 12 Followers
-              </span>
+              </button>
             </div>
 
             <button
               onClick={() => setIsFollowing(!isFollowing)}
-              className="bg-[#D4FB20] hover:bg-[#c2ea13] text-[#040819] px-7 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-colors cursor-pointer"
+              className="bg-[#D4FB20] hover:bg-[#c2ea13] text-[#040819] px-7 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all active:scale-95 cursor-pointer"
             >
               {isFollowing ? 'Following' : 'Follow'}
             </button>
@@ -85,11 +85,11 @@ export default function Creators() {
         {/* Filter and Sort bar */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <div className="flex flex-wrap items-center gap-3">
-            <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium hover:border-brand-blue transition-colors">
+            <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium hover:border-black cursor-pointer active:scale-95 transition-all">
               <SlidersHorizontal className="w-4 h-4 text-[#242528]" />
               <span>Filter</span>
             </button>
-            <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium hover:border-brand-blue transition-colors">
+            <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium hover:border-black cursor-pointer active:scale-95 transition-all">
               <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
                 <rect x="1" y="9" width="3" height="6" rx="0.5" />
                 <rect x="6.5" y="5" width="3" height="10" rx="0.5" />
@@ -97,16 +97,16 @@ export default function Creators() {
               </svg>
               <span>Level</span>
             </button>
-            <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium hover:border-brand-blue transition-colors">
+            <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium hover:border-black cursor-pointer active:scale-95 transition-all">
               <Layers className="w-4 h-4 text-[#242528]" />
               <span>Category</span>
             </button>
           </div>
 
-          <div className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium">
+          <button className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CED0D3] bg-white text-[#242528] text-sm font-medium hover:border-black cursor-pointer active:scale-95 transition-all">
             <ArrowUpDown className="w-4 h-4 text-[#242528]" />
             <span>Most relevant</span>
-          </div>
+          </button>
         </div>
 
         {/* 6 Course Cards Grid */}

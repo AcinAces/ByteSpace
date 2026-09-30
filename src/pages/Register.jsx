@@ -26,7 +26,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#003BE2] relative flex flex-col justify-between overflow-x-hidden select-none">
+    <div className="min-h-screen w-full bg-[#003BE2] relative flex flex-col justify-between overflow-x-hidden">
       <GridBackground />
 
       {/* Main Container */}
@@ -50,7 +50,7 @@ export default function Register() {
             {/* Course cards & shapes visual container */}
             <div className="relative mt-12 w-[620px] h-[560px] hidden sm:block">
               {/* Back Card (Build Digital Asset) at x=0, y=89 */}
-              <div className="absolute left-0 top-[89px] w-[372px] h-[383px] rounded-[23.5px] border border-[#CED0D3] bg-white p-[16px] shadow-sm select-none z-0">
+              <div className="absolute left-0 top-[89px] w-[372px] h-[383px] rounded-[23.5px] border border-[#CED0D3] bg-white p-[16px] shadow-sm z-0 cursor-pointer hover:scale-[1.02] active:scale-95 transition-transform">
                 <div className="relative w-[341px] h-[195px] rounded-[12px] overflow-hidden bg-gray-100">
                   <img
                     src="/images/search-course-2.png"
@@ -72,15 +72,23 @@ export default function Register() {
                   </div>
                 </div>
                 <div className="mt-4 pt-3 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-[16px] bg-[#F5F5F6] text-[#242528] text-[12px] font-medium">
-                    <span className="inline-block w-2.5 h-2.5 border-l-2 border-b-2 border-[#242528]"></span>
-                    Beginner
+                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-[16px] bg-[#F5F5F6] text-[#242528] text-[12px] font-medium cursor-pointer hover:bg-gray-200">
+                    <svg
+                      className="w-3 h-3 text-[#4B4C53] flex-shrink-0"
+                      viewBox="0 0 13 14"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path d="M10 0H12.5V13.34H10V0ZM0 8.34H2.5V13.34H0V8.34ZM5 4.17H7.5V13.34H5V4.17Z" />
+                    </svg>
+                    <span>Beginner</span>
                   </div>
                   <div className="flex items-center -space-x-2">
-                    <img src="/images/auth-avatar-1.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover" />
-                    <img src="/images/auth-avatar-2.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover" />
-                    <img src="/images/auth-avatar-3.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover" />
-                    <div className="w-[26px] h-[26px] rounded-full border border-white bg-black text-white text-[9px] font-bold flex items-center justify-center">26+</div>
+                    <img src="/images/auth-avatar-1.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover hover:scale-110 cursor-pointer transition-transform" />
+                    <img src="/images/auth-avatar-2.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover hover:scale-110 cursor-pointer transition-transform" />
+                    <img src="/images/auth-avatar-3.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover hover:scale-110 cursor-pointer transition-transform" />
+                    <div className="w-[26px] h-[26px] rounded-full border border-white bg-[#D4FB20] text-[#040819] text-[9px] font-bold flex items-center justify-center hover:scale-110 cursor-pointer transition-transform">26+</div>
                   </div>
                   <div className="text-[18px] font-bold text-[#003BE2]">
                     $25<span className="text-[13px] text-[#82868E] font-normal">/lifetime</span>
@@ -89,7 +97,7 @@ export default function Register() {
               </div>
 
               {/* Front Card (the Power of Big Data) at x=111, y=0 */}
-              <div className="absolute left-[111px] top-0 w-[372px] h-[383px] rounded-[23.5px] border border-[#CED0D3] bg-white p-[16px] shadow-2xl select-none z-10">
+              <div className="absolute left-[111px] top-0 w-[372px] h-[383px] rounded-[23.5px] border border-[#CED0D3] bg-white p-[16px] shadow-2xl z-10 cursor-pointer hover:scale-[1.02] active:scale-95 transition-transform">
                 <div className="relative w-[341px] h-[195px] rounded-[12px] overflow-hidden bg-gray-100">
                   <img
                     src="/images/search-course-3.png"
@@ -119,15 +127,23 @@ export default function Register() {
                   </div>
                 </div>
                 <div className="mt-4 pt-3 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-[16px] bg-[#F5F5F6] text-[#242528] text-[12px] font-medium">
-                    <span className="inline-block w-2.5 h-2.5 border-l-2 border-b-2 border-[#242528]"></span>
-                    Beginner
+                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-[16px] bg-[#F5F5F6] text-[#242528] text-[12px] font-medium cursor-pointer hover:bg-gray-200">
+                    <svg
+                      className="w-3 h-3 text-[#4B4C53] flex-shrink-0"
+                      viewBox="0 0 13 14"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <path d="M10 0H12.5V13.34H10V0ZM0 8.34H2.5V13.34H0V8.34ZM5 4.17H7.5V13.34H5V4.17Z" />
+                    </svg>
+                    <span>Beginner</span>
                   </div>
                   <div className="flex items-center -space-x-2">
-                    <img src="/images/auth-avatar-1.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover" />
-                    <img src="/images/auth-avatar-2.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover" />
-                    <img src="/images/auth-avatar-3.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover" />
-                    <div className="w-[26px] h-[26px] rounded-full border border-white bg-black text-white text-[9px] font-bold flex items-center justify-center">26+</div>
+                    <img src="/images/auth-avatar-1.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover hover:scale-110 cursor-pointer transition-transform" />
+                    <img src="/images/auth-avatar-2.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover hover:scale-110 cursor-pointer transition-transform" />
+                    <img src="/images/auth-avatar-3.png" alt="Student" className="w-[26px] h-[26px] rounded-full border border-white object-cover hover:scale-110 cursor-pointer transition-transform" />
+                    <div className="w-[26px] h-[26px] rounded-full border border-white bg-[#D4FB20] text-[#040819] text-[9px] font-bold flex items-center justify-center hover:scale-110 cursor-pointer transition-transform">26+</div>
                   </div>
                   <div className="text-[18px] font-bold text-[#003BE2]">
                     $25<span className="text-[13px] text-[#82868E] font-normal">/lifetime</span>
@@ -136,7 +152,7 @@ export default function Register() {
               </div>
 
               {/* Happy Students Badge at x=225, y=434 */}
-              <div className="absolute left-[225px] top-[434px] w-[258px] h-[123px] rounded-[16px] bg-[#D4FB20] p-4 shadow-xl z-20 select-none">
+              <div className="absolute left-[225px] top-[434px] w-[258px] h-[123px] rounded-[16px] bg-[#D4FB20] p-4 shadow-xl z-20 cursor-pointer hover:scale-105 active:scale-95 transition-transform">
                 <span className="text-[16px] font-bold text-[#242528] block">Happy Students</span>
                 <div className="flex items-center gap-1.5 mt-0.5 text-[13px] font-medium text-[#242528]">
                   <span className="font-bold">4.5</span>
@@ -144,13 +160,13 @@ export default function Register() {
                   <Star className="w-3.5 h-3.5 fill-[#003BE2] text-[#003BE2]" />
                 </div>
                 <div className="flex items-center -space-x-2 mt-2.5">
-                  <img src="/images/auth-avatar-6.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover" />
-                  <img src="/images/auth-avatar-7.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover" />
-                  <img src="/images/auth-avatar-8.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover" />
-                  <img src="/images/auth-avatar-9.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover" />
-                  <img src="/images/auth-avatar-10.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover" />
-                  <img src="/images/auth-avatar-11.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover" />
-                  <div className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] bg-[#242528] text-white text-[10px] font-bold flex items-center justify-center">2K+</div>
+                  <img src="/images/auth-avatar-6.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover hover:scale-110 transition-transform" />
+                  <img src="/images/auth-avatar-7.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover hover:scale-110 transition-transform" />
+                  <img src="/images/auth-avatar-8.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover hover:scale-110 transition-transform" />
+                  <img src="/images/auth-avatar-9.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover hover:scale-110 transition-transform" />
+                  <img src="/images/auth-avatar-10.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover hover:scale-110 transition-transform" />
+                  <img src="/images/auth-avatar-11.png" alt="Student" className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] object-cover hover:scale-110 transition-transform" />
+                  <div className="w-[28px] h-[28px] rounded-full border border-[#D4FB20] bg-[#242528] text-white text-[10px] font-bold flex items-center justify-center hover:scale-110 transition-transform">2K+</div>
                 </div>
               </div>
 
@@ -226,7 +242,7 @@ export default function Register() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-[123px] h-[46px] rounded-[23px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] hover:brightness-105 active:scale-95 transition-all flex items-center justify-center shadow-sm disabled:opacity-80"
+                      className="w-[123px] h-[46px] rounded-[23px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] hover:brightness-105 active:scale-95 transition-all flex items-center justify-center shadow-sm disabled:opacity-80 cursor-pointer"
                     >
                       {isSubmitting ? <LoadingSpinner size="xs" /> : 'Continue'}
                     </button>

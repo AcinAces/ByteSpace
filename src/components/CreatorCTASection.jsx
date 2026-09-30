@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function CreatorCTASection() {
   return (
-    <section className="relative w-full bg-[#003BE2] py-20 lg:py-28 overflow-hidden text-white text-center select-none">
+    <section className="relative w-full bg-[#003BE2] py-20 lg:py-28 overflow-hidden text-white text-center select-text">
       {/* 
         Full-bleed 120px x 120px Grid Overlay matching Figma Home.svg:
         opacity="0.12", stroke="white", strokeWidth="2"

@@ -6,7 +6,7 @@ import GridBackground from '../components/GridBackground';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col bg-white select-none">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* 
         Hero 404 Section (Height 957px matching Figma 404 Not Found.svg)
       */}
@@ -42,7 +42,7 @@ export default function NotFound() {
           <div className="relative z-20 mt-8">
             <Link
               to="/"
-              className="w-[163px] h-[46px] rounded-[23px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] hover:brightness-105 active:scale-95 transition-all flex items-center justify-center shadow-sm"
+              className="w-[163px] h-[46px] rounded-[23px] bg-[#D4FB20] text-[#242528] font-medium text-[15px] hover:brightness-105 active:scale-95 transition-all flex items-center justify-center shadow-sm cursor-pointer"
             >
               Back to Home
             </Link>
