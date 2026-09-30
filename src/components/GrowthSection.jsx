@@ -26,14 +26,14 @@ export default function GrowthSection() {
               </div>
 
               {/* Floating Badge 1: Total Revenue (Top Left) */}
-              <div className="absolute top-6 -left-4 sm:-left-8 bg-[#003BE2] text-white p-3.5 sm:p-4 rounded-[16px] shadow-xl min-w-[170px] animate-float">
+              <div className="absolute top-6 -left-4 sm:-left-8 bg-[#003BE2] text-white p-3.5 sm:p-4 rounded-[16px] shadow-xl min-w-[170px]">
                 <span className="block text-[11px] text-white/70 font-medium">Total Revenue</span>
                 <span className="block text-[10px] text-white/50">July 1-28</span>
                 <span className="block text-xl sm:text-2xl font-extrabold mt-1">$120.29</span>
               </div>
 
               {/* Floating Badge 2: Year to Date (Middle Left) */}
-              <div className="absolute top-36 -left-6 sm:-left-12 bg-[#003BE2] text-white p-3.5 sm:p-4 rounded-[16px] shadow-xl min-w-[190px] animate-float-reverse">
+              <div className="absolute top-36 -left-6 sm:-left-12 bg-[#003BE2] text-white p-3.5 sm:p-4 rounded-[16px] shadow-xl min-w-[190px]">
                 <span className="block text-[11px] text-white/70 font-medium">Year to Date</span>
                 <span className="block text-[10px] text-white/50">2023</span>
                 <div className="flex items-center gap-2 mt-1">
@@ -45,7 +45,7 @@ export default function GrowthSection() {
               </div>
 
               {/* Floating Badge 3: Happy Students (Bottom Right) */}
-              <div className="absolute bottom-4 -right-2 sm:-right-8 bg-white text-[#242528] p-3 sm:p-4 rounded-[16px] shadow-xl border border-gray-100 min-w-[170px] animate-float">
+              <div className="absolute bottom-4 -right-2 sm:-right-8 bg-white text-[#242528] p-3 sm:p-4 rounded-[16px] shadow-xl border border-gray-100 min-w-[170px]">
                 <span className="block font-bold text-xs sm:text-sm">Happy Students</span>
                 <div className="flex items-center gap-1.5 text-xs font-bold mt-0.5">
                   <span>4.5</span>

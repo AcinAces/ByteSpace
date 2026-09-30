@@ -4,6 +4,7 @@ import { Search, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CourseCard from '../components/CourseCard';
+import GridBackground from '../components/GridBackground';
 import { coursesData, courseCategories } from '../data/coursesData';
 
 export default function Courses() {
@@ -39,38 +40,7 @@ export default function Courses() {
         Top Hero Banner Section (Height 360px matching Figma Search Page.svg)
       */}
       <section className="relative w-full h-[360px] bg-[#003BE2] flex flex-col justify-between overflow-hidden text-white">
-        {/* SVG Grid Lines Background (opacity 0.12) */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-0">
-          <svg
-            className="absolute left-1/2 -translate-x-1/2 top-0 w-[1440px] h-full max-w-none pointer-events-none"
-            viewBox="0 0 1440 360"
-            preserveAspectRatio="none"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g opacity="0.12">
-              <line x1="-239" y1="0" x2="-239" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="-119" y1="0" x2="-119" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="1" y1="0" x2="1" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="121" y1="0" x2="121" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="241" y1="0" x2="241" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="361" y1="0" x2="361" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="481" y1="0" x2="481" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="601" y1="0" x2="601" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="721" y1="0" x2="721" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="841" y1="0" x2="841" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="961" y1="0" x2="961" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="1081" y1="0" x2="1081" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="1201" y1="0" x2="1201" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="1321" y1="0" x2="1321" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="1441" y1="0" x2="1441" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="1561" y1="0" x2="1561" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="1681" y1="0" x2="1681" y2="360" stroke="white" strokeWidth="2" />
-              <line x1="-500" y1="239" x2="1940" y2="239" stroke="white" strokeWidth="2" />
-              <line x1="-500" y1="119" x2="1940" y2="119" stroke="white" strokeWidth="2" />
-            </g>
-          </svg>
-        </div>
+        <GridBackground />
 
         {/* Top Navbar */}
         <div className="relative z-20">

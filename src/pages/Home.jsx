@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import GridBackground from '../components/GridBackground';
 import HeroSection from '../components/HeroSection';
 import PartnersSection from '../components/PartnersSection';
 import CoursesSection from '../components/CoursesSection';
@@ -19,6 +20,7 @@ export default function Home() {
         with zero premature white space at the bottom on all screen heights.
       */}
       <div className="relative w-full bg-brand-blue min-h-screen flex flex-col justify-between overflow-hidden">
+        <GridBackground />
         <Navbar variant="blue" />
         <HeroSection />
       </div>
