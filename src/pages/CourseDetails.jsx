@@ -730,9 +730,9 @@ export default function CourseDetails() {
                   {/* Instructor Profile Card */}
                   <div className="flex items-center gap-3.5 mb-4">
                     <img
-                      src="/images/auth-avatar-1.png"
+                      src="/images/creator-purepearl.jpg"
                       alt="PurePearl Studio"
-                      className="w-12 h-12 rounded-full object-cover border border-[#CED0D3] flex-shrink-0"
+                      className="w-[52px] h-[52px] rounded-full object-cover flex-shrink-0"
                     />
                     <div>
                       <h5 className="text-[16px] font-bold text-[#242528] leading-tight">
