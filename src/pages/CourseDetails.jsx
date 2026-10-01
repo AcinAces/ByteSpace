@@ -15,7 +15,6 @@ export default function CourseDetails() {
       : 'About'
   );
   const [selectedRating, setSelectedRating] = useState('All');
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const [isEnrolled, setIsEnrolled] = useState(false);
 
@@ -277,26 +276,19 @@ export default function CourseDetails() {
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
 
-                {/* Centered Play Button */}
+                {/* Centered Play Button (Static preview) */}
                 <button
                   type="button"
-                  onClick={() => setIsPlaying(!isPlaying)}
+                  onClick={(e) => e.preventDefault()}
                   className="absolute inset-0 m-auto w-[84px] h-[84px] sm:w-[103px] sm:h-[103px] rounded-[23.5px] bg-[#3D3D3D]/80 backdrop-blur-md flex items-center justify-center border border-[#4F4F4F] shadow-2xl hover:scale-105 active:scale-95 transition-all cursor-pointer"
-                  aria-label={isPlaying ? 'Pause preview' : 'Play preview'}
+                  aria-label="Course preview"
                 >
-                  {isPlaying ? (
-                    <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-7 bg-white rounded-sm" />
-                      <div className="w-2.5 h-7 bg-white rounded-sm" />
-                    </div>
-                  ) : (
-                    <svg
-                      className="w-8 h-8 sm:w-10 sm:h-10 text-white translate-x-0.5 fill-white"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  )}
+                  <svg
+                    className="w-8 h-8 sm:w-10 sm:h-10 text-white translate-x-0.5 fill-white"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
                 </button>
               </div>
 
