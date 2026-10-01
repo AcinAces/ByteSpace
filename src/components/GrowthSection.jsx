@@ -143,7 +143,7 @@ export default function GrowthSection() {
                         </h4>
                       </Link>
                       <p className="text-xs text-[#82868E] mt-0.5">
-                        by <Link to="/creators" className="hover:underline cursor-pointer hover:text-[#003BE2] transition-colors">purepearl studio</Link>
+                        by <Link to="/creators" className="text-[#003BE2] hover:underline cursor-pointer">purepearl studio</Link>
                       </p>
                     </div>
                     {/* Rating 4.5 */}

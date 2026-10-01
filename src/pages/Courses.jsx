@@ -98,27 +98,24 @@ export default function Courses() {
           <div className="flex flex-wrap items-center gap-3">
             {/* Filter */}
             <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black cursor-pointer active:scale-95 transition-all">
-              <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M1 3h14l-5.5 6.5V14l-3-2V9.5L1 3z"/>
+              <svg className="w-4 h-4 text-[#242528]" viewBox="139 448 16 16" fill="currentColor">
+                <path d="M142.005 450H152.005L146.995 456.3L142.005 450ZM139.255 449.61C141.275 452.2 145.005 457 145.005 457V463C145.005 463.55 145.455 464 146.005 464H148.005C148.555 464 149.005 463.55 149.005 463V457C149.005 457 152.725 452.2 154.745 449.61C155.255 448.95 154.785 448 153.955 448H140.045C139.215 448 138.745 448.95 139.255 449.61Z" />
               </svg>
               <span>Filter</span>
             </button>
 
             {/* Level */}
             <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black cursor-pointer active:scale-95 transition-all">
-              <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
-                <rect x="1" y="9" width="3" height="6" rx="0.5"/>
-                <rect x="6.5" y="5" width="3" height="10" rx="0.5"/>
-                <rect x="12" y="1" width="3" height="14" rx="0.5"/>
+              <svg className="w-4 h-4 text-[#242528]" viewBox="251 448 16 16" fill="currentColor">
+                <path d="M263.5 448H266.5V464H263.5V448ZM251.5 458H254.5V464H251.5V458ZM257.5 453H260.5V464H257.5V453Z" />
               </svg>
               <span>Level</span>
             </button>
 
             {/* Category */}
             <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black cursor-pointer active:scale-95 transition-all">
-              <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
-                <path d="M8 1L2 10h12L8 1z"/>
-                <rect x="2" y="12" width="12" height="3" rx="0.5"/>
+              <svg className="w-[18px] h-4 text-[#242528]" viewBox="362.5 446 19 20" fill="currentColor">
+                <path d="M371.5 446L366 455H377L371.5 446ZM371.5 449.84L373.43 453H369.56L371.5 449.84ZM377 457C374.51 457 372.5 459.01 372.5 461.5C372.5 463.99 374.51 466 377 466C379.49 466 381.5 463.99 381.5 461.5C381.5 459.01 379.49 457 377 457ZM377 464C375.62 464 374.5 462.88 374.5 461.5C374.5 460.12 375.62 459 377 459C378.38 459 379.5 460.12 379.5 461.5C379.5 462.88 378.38 464 377 464ZM362.5 465.5H370.5V457.5H362.5V465.5ZM364.5 459.5H368.5V463.5H364.5V459.5Z" />
               </svg>
               <span>Category</span>
             </button>
@@ -127,10 +124,8 @@ export default function Courses() {
           {/* Right: Most relevant */}
           <div className="flex items-center">
             <button className="h-[47px] px-5 rounded-[23.5px] border border-[#CED0D3] bg-white text-[#242528] text-[14px] font-medium flex items-center gap-2 hover:border-black cursor-pointer active:scale-95 transition-all">
-              <svg className="w-4 h-4 text-[#242528]" viewBox="0 0 16 16" fill="currentColor">
-                <rect x="1" y="2" width="14" height="2" rx="0.5"/>
-                <rect x="1" y="7" width="10" height="2" rx="0.5"/>
-                <rect x="1" y="12" width="6" height="2" rx="0.5"/>
+              <svg className="w-[18px] h-4 text-[#242528]" viewBox="1182 448 18 16" fill="currentColor">
+                <path d="M1182 462H1188V460H1182V462ZM1182 450V452H1200V450H1182ZM1182 457H1194V455H1182V457Z" />
               </svg>
               <span>Most relevant</span>
             </button>

@@ -62,8 +62,10 @@ export default function Login() {
                 </div>
                 <div className="mt-4 flex items-start justify-between">
                   <div>
-                    <h3 className="text-[18px] font-bold text-[#242528] leading-tight">Build Digital Asset</h3>
-                    <p className="text-[13px] text-[#82868E] mt-0.5">by purepearl studio</p>
+                    <Link to="/courses/build-digital-asset">
+                      <h3 className="text-[18px] font-bold text-[#242528] leading-tight hover:text-[#003BE2] transition-colors cursor-pointer">Build Digital Asset</h3>
+                    </Link>
+                    <p className="text-[13px] text-[#82868E] mt-0.5">by <Link to="/creators" className="text-[#003BE2] hover:underline cursor-pointer">purepearl studio</Link></p>
                   </div>
                   <div className="flex items-center gap-1 text-[14px] font-bold text-[#242528]">
                     <span>4.5</span>
@@ -118,7 +120,7 @@ export default function Login() {
                 <div className="mt-4 flex items-start justify-between">
                   <div>
                     <h3 className="text-[18px] font-bold text-[#242528] leading-tight">the Power of Big Data</h3>
-                    <p className="text-[13px] text-[#82868E] mt-0.5">by purepearl studio</p>
+                    <p className="text-[13px] text-[#82868E] mt-0.5">by <Link to="/creators" className="text-[#003BE2] hover:underline cursor-pointer">purepearl studio</Link></p>
                   </div>
                   <div className="flex items-center gap-1 text-[14px] font-bold text-[#242528]">
                     <span>4.5</span>

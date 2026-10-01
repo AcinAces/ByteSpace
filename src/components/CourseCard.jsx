@@ -18,10 +18,12 @@ export default function CourseCard({ course }) {
     image
   } = course;
 
+  const courseLink = (title === 'Build Digital Asset' || id === 2) ? '/courses/build-digital-asset' : '/courses';
+
   return (
     <div className="bg-white rounded-[24px] p-3.5 border border-[#CED0D3] hover:shadow-card transition-all duration-300 flex flex-col group cursor-pointer">
       {/* Thumbnail Container */}
-      <Link to="/courses" className="relative w-full h-[195px] rounded-[12px] overflow-hidden bg-brand-gray-100 flex-shrink-0 block">
+      <Link to={courseLink} className="relative w-full h-[195px] rounded-[12px] overflow-hidden bg-brand-gray-100 flex-shrink-0 block">
         <img
           src={image}
           alt={title}
@@ -48,7 +50,7 @@ export default function CourseCard({ course }) {
         {/* Title and Rating */}
         <div>
           <div className="flex items-start justify-between gap-2">
-            <Link to="/courses" className="block">
+            <Link to={courseLink} className="block">
               <h3 className="font-bold text-[17px] text-[#242528] group-hover:text-brand-blue transition-colors line-clamp-1 leading-snug cursor-pointer">
                 {shortTitle || title}
               </h3>
@@ -59,7 +61,7 @@ export default function CourseCard({ course }) {
             </div>
           </div>
           <p className="text-xs text-[#82868E] mt-1 font-normal">
-            by <Link to="/creators" className="hover:underline cursor-pointer text-[#82868E] hover:text-brand-blue transition-colors">{author}</Link>
+            by <Link to="/creators" className="text-[#003BE2] hover:underline cursor-pointer">{author}</Link>
           </p>
         </div>
 

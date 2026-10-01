@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Courses from './pages/Courses';
 import Creators from './pages/Creators';
+import CourseDetails from './pages/CourseDetails';
 import NotFound from './pages/NotFound';
 import { LoadingProvider } from './context/LoadingContext';
 
@@ -37,6 +38,9 @@ function AnimatedRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/build-digital-asset" element={<CourseDetails />} />
+        <Route path="/courses/2" element={<CourseDetails />} />
+        <Route path="/course-details" element={<CourseDetails />} />
         <Route path="/creators" element={<Creators />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
