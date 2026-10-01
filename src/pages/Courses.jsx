@@ -63,7 +63,7 @@ export default function Courses() {
 
         {/* Search Content */}
         <div className="relative z-10 flex-grow flex flex-col items-center justify-center text-center px-6 pb-6">
-          <h1 className="text-[36px] sm:text-[44px] font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-[36px] sm:text-[44px] font-bold tracking-tight text-white leading-tight">
             Find Your Next Course
           </h1>
 

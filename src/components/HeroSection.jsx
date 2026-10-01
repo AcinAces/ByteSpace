@@ -152,7 +152,7 @@ export default function HeroSection() {
                 <span className="block text-[12px] sm:text-[13px] text-[#82868E] font-normal leading-none">
                   Learning Progress
                 </span>
-                <span className="block font-extrabold text-[28px] sm:text-[34px] text-[#242528] mt-1.5 leading-none tracking-tight">
+                <span className="block font-bold text-[28px] sm:text-[34px] text-[#242528] mt-1.5 leading-none tracking-tight">
                   55%
                 </span>
               </div>
@@ -181,7 +181,7 @@ export default function HeroSection() {
                 <img src="/images/image5_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
                 <img src="/images/image6_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
                 <img src="/images/image7_0_1.png" alt="Student" className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white object-cover flex-shrink-0 hover:scale-110 transition-transform cursor-pointer" />
-                <div className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[8px] sm:text-[10px] font-extrabold flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform cursor-pointer">
+                <div className="w-6 h-6 sm:w-[32px] sm:h-[32px] rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[8px] sm:text-[10px] font-bold flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform cursor-pointer">
                   2K+
                 </div>
               </div>

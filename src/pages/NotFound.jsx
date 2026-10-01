@@ -30,7 +30,7 @@ export default function NotFound() {
           </div>
 
           {/* Heading overlapping the bottom of 404 */}
-          <h1 className="relative z-20 text-[36px] sm:text-[48px] lg:text-[56px] font-extrabold text-white tracking-tight leading-[1.15] max-w-[800px]">
+          <h1 className="relative z-20 text-[36px] sm:text-[48px] lg:text-[56px] font-bold text-white tracking-tight leading-[1.15] max-w-[800px]">
             The page you are looking for doesn’t exist
           </h1>
 

@@ -15,7 +15,7 @@ export default function CoursesSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-brand-dark tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-brand-dark tracking-tight leading-tight">
             Discover Your Passion,<br />
             Build Your Skills
           </h2>
