@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CourseCard from '../components/CourseCard';
@@ -6,8 +6,6 @@ import GridBackground from '../components/GridBackground';
 import { coursesData } from '../data/coursesData';
 
 export default function Creators() {
-  const [isFollowing, setIsFollowing] = useState(false);
-
   // Top 6 courses matching Creator Profile.svg
   const creatorCourses = coursesData.slice(0, 6);
 
@@ -72,10 +70,11 @@ export default function Creators() {
             </div>
 
             <button
-              onClick={() => setIsFollowing(!isFollowing)}
+              type="button"
+              onClick={(e) => e.preventDefault()}
               className="h-[46px] w-[101px] rounded-[23px] bg-[#D4FB20] hover:brightness-105 text-[#040819] text-[15px] font-semibold shadow-sm transition-all active:scale-95 cursor-pointer flex items-center justify-center"
             >
-              {isFollowing ? 'Following' : 'Follow'}
+              Follow
             </button>
           </div>
         </div>

@@ -15,9 +15,7 @@ export default function CourseDetails() {
       : 'About'
   );
   const [selectedRating, setSelectedRating] = useState('All');
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
-  const [isEnrolled, setIsEnrolled] = useState(false);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -277,26 +275,19 @@ export default function CourseDetails() {
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
 
-                {/* Centered Play Button */}
+                {/* Centered Play Button (Static preview) */}
                 <button
                   type="button"
-                  onClick={() => setIsPlaying(!isPlaying)}
+                  onClick={(e) => e.preventDefault()}
                   className="absolute inset-0 m-auto w-[84px] h-[84px] sm:w-[103px] sm:h-[103px] rounded-[23.5px] bg-[#3D3D3D]/80 backdrop-blur-md flex items-center justify-center border border-[#4F4F4F] shadow-2xl hover:scale-105 active:scale-95 transition-all cursor-pointer"
-                  aria-label={isPlaying ? 'Pause preview' : 'Play preview'}
+                  aria-label="Course preview"
                 >
-                  {isPlaying ? (
-                    <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-7 bg-white rounded-sm" />
-                      <div className="w-2.5 h-7 bg-white rounded-sm" />
-                    </div>
-                  ) : (
-                    <svg
-                      className="w-8 h-8 sm:w-10 sm:h-10 text-white translate-x-0.5 fill-white"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  )}
+                  <svg
+                    className="w-8 h-8 sm:w-10 sm:h-10 text-white translate-x-0.5 fill-white"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
                 </button>
               </div>
 
@@ -689,10 +680,10 @@ export default function CourseDetails() {
                   {/* Enroll Button */}
                   <button
                     type="button"
-                    onClick={() => setIsEnrolled(!isEnrolled)}
+                    onClick={(e) => e.preventDefault()}
                     className="w-full h-[46px] rounded-[23px] bg-[#D4FB20] text-[#040819] font-bold text-[15px] hover:brightness-105 active:scale-95 transition-all shadow-sm flex items-center justify-center cursor-pointer mb-7"
                   >
-                    {isEnrolled ? 'Enrolled Successfully!' : 'Enroll Now'}
+                    Enroll Now
                   </button>
 
                   {/* Checklist */}
@@ -719,6 +710,10 @@ export default function CourseDetails() {
                       <div className="flex items-center gap-3">
                         <svg className="w-5 h-5 text-[#003BE2] flex-shrink-0" viewBox="950 1038 20 20" fill="currentColor">
                           <path d="M968 1043H963V1040C963 1038.9 962.1 1038 961 1038H959C957.9 1038 957 1038.9 957 1040V1043H952C950.9 1043 950 1043.9 950 1045V1056C950 1057.1 950.9 1058 952 1058H968C969.1 1058 970 1057.1 970 1056V1045C970 1043.9 969.1 1043 968 1043ZM959 1040H961V1045H959V1040ZM968 1056H952V1045H957C957 1046.1 957.9 1047 959 1047H961C962.1 1047 963 1046.1 963 1045H968V1056Z" />
+                          <path d="M957 1051C957.828 1051 958.5 1050.33 958.5 1049.5C958.5 1048.67 957.828 1048 957 1048C956.172 1048 955.5 1048.67 955.5 1049.5C955.5 1050.33 956.172 1051 957 1051Z" />
+                          <path d="M959.08 1052.18C958.44 1051.9 957.74 1051.75 957 1051.75C956.26 1051.75 955.56 1051.9 954.92 1052.18C954.36 1052.42 954 1052.96 954 1053.57V1054H960V1053.57C960 1052.96 959.64 1052.42 959.08 1052.18Z" />
+                          <path d="M966 1048H962V1049.5H966V1048Z" />
+                          <path d="M966 1051H962V1052.5H966V1051Z" />
                         </svg>
                         <span>Certificate of Completion</span>
                       </div>
@@ -738,9 +733,9 @@ export default function CourseDetails() {
                   {/* Instructor Profile Card */}
                   <div className="flex items-center gap-3.5 mb-4">
                     <img
-                      src="/images/auth-avatar-1.png"
+                      src="/images/creator-purepearl.jpg"
                       alt="PurePearl Studio"
-                      className="w-12 h-12 rounded-full object-cover border border-[#CED0D3] flex-shrink-0"
+                      className="w-[52px] h-[52px] rounded-full object-cover flex-shrink-0"
                     />
                     <div>
                       <h5 className="text-[16px] font-bold text-[#242528] leading-tight">
