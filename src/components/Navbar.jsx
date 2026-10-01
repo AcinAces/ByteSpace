@@ -16,7 +16,7 @@ export default function Navbar({ variant = 'blue', className = '' }) {
   ];
 
   return (
-    <header className={`w-full z-50 pt-4 sm:pt-6 lg:pt-8 transition-colors ${isBlue ? 'bg-transparent text-white' : 'bg-white text-brand-dark border-b border-gray-100'} ${className}`}>
+    <header className={`w-full z-50 pt-[14.4px] sm:pt-[21.6px] lg:pt-[28.8px] transition-colors ${isBlue ? 'bg-transparent text-white' : 'bg-white text-brand-dark border-b border-gray-100'} ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between">
         {/* Left: Brand Logo */}
         <div className="flex-shrink-0">
