@@ -38,7 +38,7 @@ export default function Creators() {
               />
               <div>
                 <div className="flex items-center gap-3">
-                  <h1 className="text-2xl sm:text-3xl lg:text-[40px] font-extrabold text-white tracking-tight leading-tight">
+                  <h1 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white tracking-tight leading-tight">
                     PurePearl Studio
                   </h1>
                   <span className="bg-[#D4FB20] text-[#040819] text-xs font-semibold px-3 py-1 rounded-full cursor-pointer hover:scale-105 active:scale-95 transition-transform">

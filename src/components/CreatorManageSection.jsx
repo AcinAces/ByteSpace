@@ -38,7 +38,7 @@ export default function CreatorManageSection() {
                 <span className="block text-[11px] text-white/80 font-medium">Total Revenue</span>
                 <span className="block text-[10px] text-white/60">July 1-28</span>
                 <div className="flex items-center justify-between mt-1">
-                  <span className="text-xl sm:text-2xl font-extrabold">$120.29</span>
+                  <span className="text-xl sm:text-2xl font-bold">$120.29</span>
                   <span className="px-2 py-0.5 rounded-full bg-[#CBFC01] text-[#242528] text-[10px] font-bold">
                     +123
                   </span>
@@ -56,7 +56,7 @@ export default function CreatorManageSection() {
               >
                 <span className="block text-[11px] text-white/80 font-medium">Year to Date</span>
                 <span className="block text-[10px] text-white/60">2023</span>
-                <span className="block text-base sm:text-lg font-extrabold mt-0.5">$1,200.38</span>
+                <span className="block text-base sm:text-lg font-bold mt-0.5">$1,200.38</span>
                 <div className="mt-1.5">
                   <span className="px-2 py-0.5 rounded-full bg-[#CBFC01] text-[#242528] text-[10px] font-bold inline-block">
                     +123
@@ -80,7 +80,7 @@ export default function CreatorManageSection() {
                   <img src="/images/image4_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover hover:scale-110 transition-transform cursor-pointer" />
                   <img src="/images/image5_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover hover:scale-110 transition-transform cursor-pointer" />
                   <img src="/images/image6_0_1.png" alt="Student" className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white object-cover hidden sm:block hover:scale-110 transition-transform cursor-pointer" />
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[9px] sm:text-[10px] font-extrabold flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform cursor-pointer">
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white bg-[#D4FB20] text-[#242528] text-[9px] sm:text-[10px] font-bold flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform cursor-pointer">
                     2K+
                   </div>
                 </div>

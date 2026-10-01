@@ -40,10 +40,10 @@ export default function Register() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center my-auto py-8">
           {/* Left Column: Heading, text and course cards graphic */}
           <div className="lg:col-span-6 flex flex-col justify-center text-white">
-            <h1 className="text-[36px] sm:text-[44px] font-extrabold tracking-tight leading-[1.15]">
+            <h1 className="text-[26px] sm:text-[28px] font-semibold tracking-tight text-white leading-tight">
               Sign up and come in
             </h1>
-            <p className="mt-4 text-[#F5F5F6]/80 text-[15px] font-normal leading-relaxed max-w-[460px]">
+            <p className="mt-3 text-[#F5F5F6] text-[15px] font-normal leading-relaxed max-w-[430px]">
               The registration process is straightforward, uncomplicated, and efficient, allowing users to sign up quickly, easily, and at no cost
             </p>
 
@@ -152,7 +152,7 @@ export default function Register() {
               </div>
 
               {/* Happy Students Badge at x=225, y=434 */}
-              <div className="absolute left-[225px] top-[434px] w-[258px] h-[123px] rounded-[16px] bg-[#D4FB20] p-4 shadow-xl z-20 cursor-pointer hover:scale-105 active:scale-95 transition-transform">
+              <div className="absolute left-[225px] top-[434px] w-[258px] h-[123px] rounded-[16px] bg-[#D4FB20] p-4 shadow-xl z-30 cursor-pointer hover:scale-105 active:scale-95 transition-transform">
                 <span className="text-[16px] font-bold text-[#242528] block">Happy Students</span>
                 <div className="flex items-center gap-1.5 mt-0.5 text-[13px] font-medium text-[#242528]">
                   <span className="font-bold">4.5</span>
@@ -170,24 +170,24 @@ export default function Register() {
                 </div>
               </div>
 
-              {/* Exact Doodles from Figma */}
-              {/* Top-Left Torus Doodle */}
+              {/* Exact 2D Doodles matching Figma design */}
+              {/* Top-Left Donut Doodle (sits in upper layer over front card) */}
               <img
                 src="/images/auth-shape-torus.png"
-                alt="Decorative Torus"
-                className="absolute left-[27px] top-[14px] w-[147px] h-[147px] object-contain pointer-events-none select-none z-30"
+                alt="Decorative Donut"
+                className="absolute left-[24px] top-[14px] w-[142px] h-[142px] object-contain pointer-events-none select-none z-20"
               />
-              {/* Bottom-Left Pyramid Doodle */}
+              {/* Bottom-Left Triangle Doodle (sits in front of back card) */}
               <img
                 src="/images/auth-shape-pyramid.png"
-                alt="Decorative Pyramid"
-                className="absolute -left-[27px] top-[396px] w-[189px] h-[189px] object-contain pointer-events-none select-none z-30"
+                alt="Decorative Triangle"
+                className="absolute -left-[27px] top-[396px] w-[189px] h-[189px] object-contain pointer-events-none select-none z-20"
               />
-              {/* Bottom-Right Spring Coil Doodle */}
+              {/* Bottom-Right Spring Doodle (sits in upper layer over front card, behind happy students badge) */}
               <img
                 src="/images/auth-shape-spring.png"
                 alt="Decorative Spring"
-                className="absolute left-[348px] top-[320px] w-[176px] h-[176px] object-contain pointer-events-none select-none z-30"
+                className="absolute left-[348px] top-[315px] w-[176px] h-[176px] object-contain pointer-events-none select-none z-20"
               />
             </div>
           </div>
@@ -197,8 +197,9 @@ export default function Register() {
             <div className="w-full max-w-[579px] min-h-[784px] bg-white rounded-[24px] p-8 sm:p-14 lg:p-16 flex flex-col justify-between shadow-2xl">
               <div>
                 <span className="text-[#003BE2] font-semibold text-[15px]">Create an Account</span>
-                <h2 className="text-[36px] sm:text-[40px] font-bold text-[#242528] tracking-tight mt-1 mb-8 sm:mb-10">
-                  Welcome to ByteSpace
+                <h2 className="text-[36px] sm:text-[40px] font-bold text-[#242528] tracking-tight mt-1 mb-8 sm:mb-10 leading-[1.15]">
+                  Welcome to <br />
+                  ByteSpace
                 </h2>
 
                 <form onSubmit={handleRegister} className="space-y-6">
@@ -254,7 +255,7 @@ export default function Register() {
               <div className="pt-8">
                 <p className="text-center text-[14px] text-[#82868E]">
                   Already have an account?{' '}
-                  <Link to="/login" className="text-[#003BE2] font-medium hover:underline">
+                  <Link to="/login" className="text-[#003BE2] font-normal hover:underline">
                     Login
                   </Link>
                 </p>

@@ -80,7 +80,7 @@ export default function GrowthSection() {
             {/* Stats Row (Figma Home.svg: Clean grid without top divider border) */}
             <div ref={statsRef} className="mt-10 grid grid-cols-3 gap-6 max-w-md">
               <Link to="/courses" className="group cursor-pointer hover:scale-105 active:scale-95 transition-all inline-block">
-                <span className="block text-3xl sm:text-4xl font-extrabold text-[#003BE2] group-hover:text-blue-700 transition-colors tabular-nums">
+                <span className="block text-3xl sm:text-4xl font-bold text-[#003BE2] group-hover:text-blue-700 transition-colors tabular-nums">
                   {counts.students}K
                 </span>
                 <span className="block text-xs sm:text-sm text-[#82868E] font-medium mt-1">
@@ -88,7 +88,7 @@ export default function GrowthSection() {
                 </span>
               </Link>
               <Link to="/courses" className="group cursor-pointer hover:scale-105 active:scale-95 transition-all inline-block">
-                <span className="block text-3xl sm:text-4xl font-extrabold text-[#003BE2] group-hover:text-blue-700 transition-colors tabular-nums">
+                <span className="block text-3xl sm:text-4xl font-bold text-[#003BE2] group-hover:text-blue-700 transition-colors tabular-nums">
                   {counts.courses}+
                 </span>
                 <span className="block text-xs sm:text-sm text-[#82868E] font-medium mt-1">
@@ -96,7 +96,7 @@ export default function GrowthSection() {
                 </span>
               </Link>
               <Link to="/creators" className="group cursor-pointer hover:scale-105 active:scale-95 transition-all inline-block">
-                <span className="block text-3xl sm:text-4xl font-extrabold text-[#003BE2] group-hover:text-blue-700 transition-colors tabular-nums">
+                <span className="block text-3xl sm:text-4xl font-bold text-[#003BE2] group-hover:text-blue-700 transition-colors tabular-nums">
                   {counts.creators}
                 </span>
                 <span className="block text-xs sm:text-sm text-[#82868E] font-medium mt-1">
@@ -226,8 +226,8 @@ export default function GrowthSection() {
                 type="button"
                 className="absolute right-0 sm:right-1 top-[95px] sm:top-[110px] bg-white rounded-[16px] p-3.5 sm:p-4 shadow-[0_12px_32px_rgba(0,0,0,0.10)] border border-[#CED0D3]/60 w-[190px] sm:w-[220px] z-30 cursor-pointer hover:scale-105 active:scale-95 transition-all text-left"
               >
-                <span className="block text-xs font-semibold text-[#82868E]">Learning Progress</span>
-                <span className="block text-2xl sm:text-3xl font-extrabold text-[#242528] mt-0.5">55%</span>
+                <span className="block text-xs font-normal text-[#82868E]">Learning Progress</span>
+                <span className="block text-2xl sm:text-3xl font-bold text-[#242528] mt-0.5">55%</span>
                 <div className="mt-2 w-full h-2 bg-[#F6F6F6] rounded-full overflow-hidden">
                   <div className="w-[56%] h-full bg-[#D4FB20] rounded-full" />
                 </div>
