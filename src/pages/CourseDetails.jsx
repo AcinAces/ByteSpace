@@ -16,7 +16,6 @@ export default function CourseDetails() {
   );
   const [selectedRating, setSelectedRating] = useState('All');
   const [isCopied, setIsCopied] = useState(false);
-  const [isEnrolled, setIsEnrolled] = useState(false);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -681,10 +680,10 @@ export default function CourseDetails() {
                   {/* Enroll Button */}
                   <button
                     type="button"
-                    onClick={() => setIsEnrolled(!isEnrolled)}
+                    onClick={(e) => e.preventDefault()}
                     className="w-full h-[46px] rounded-[23px] bg-[#D4FB20] text-[#040819] font-bold text-[15px] hover:brightness-105 active:scale-95 transition-all shadow-sm flex items-center justify-center cursor-pointer mb-7"
                   >
-                    {isEnrolled ? 'Enrolled Successfully!' : 'Enroll Now'}
+                    Enroll Now
                   </button>
 
                   {/* Checklist */}
